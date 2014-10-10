@@ -1,0 +1,85 @@
+# IDN Reference table for German language
+
+# Language: German (de)
+# Version: 1.0
+# Date: 2014-10-09
+# Unicode version: 6.3.0
+
+# This IDN table is published on <https://github.com/dotse/IDN-ref-tables> where 
+# you can find the latest version, other tables and information concerning the 
+# purpose, creation and update of the tables.
+#
+# This IDN table has been created by .SE <https://www.iis.se/english/> mainly based 
+# on the material in the listed references. Anyone is free to use the tables.
+
+
+## Language references
+#
+# Wikipedia: "German orthography", http://en.wikipedia.org/wiki/German_alphabet
+#
+# In "Omniglot" - the online encyclopedia of writing systems and languages,
+#    http://www.omniglot.com/writing/german.htm
+
+
+## References for contextual rules
+#
+# RFC 5891: “Internationalized Domain Names in Applications (IDNA): Protocol” 
+#    (proposed standard), http://tools.ietf.org/html/rfc5891
+
+
+## Code points requiring contextual rules
+#
+# Code point                        Description of rule/Reference
+#
+# U+002D                            Label must neither start nor end with U+002D. Label 
+#    HYPHEN-MINUS                   must not have U+002D in both third and fourth
+#                                   position. RFC 5891 (sec 4.2.3.1)
+
+
+## Code point table
+#
+# Code   # Unicode        Specimen  Name
+# point  # script         Glyph 
+#
+U+002D   # Common         -         HYPHEN-MINUS
+U+0030   # Common         0         DIGIT ZERO
+U+0031   # Common         1         DIGIT ONE
+U+0032   # Common         2         DIGIT TWO
+U+0033   # Common         3         DIGIT THREE
+U+0034   # Common         4         DIGIT FOUR
+U+0035   # Common         5         DIGIT FIVE
+U+0036   # Common         6         DIGIT SIX
+U+0037   # Common         7         DIGIT SEVEN
+U+0038   # Common         8         DIGIT EIGHT
+U+0039   # Common         9         DIGIT NINE
+#
+U+0061   # Latin          a         LATIN SMALL LETTER A
+U+0062   # Latin          b         LATIN SMALL LETTER B
+U+0063   # Latin          c         LATIN SMALL LETTER C
+U+0064   # Latin          d         LATIN SMALL LETTER D
+U+0065   # Latin          e         LATIN SMALL LETTER E
+U+0066   # Latin          f         LATIN SMALL LETTER F
+U+0067   # Latin          g         LATIN SMALL LETTER G
+U+0068   # Latin          h         LATIN SMALL LETTER H
+U+0069   # Latin          i         LATIN SMALL LETTER I
+U+006A   # Latin          j         LATIN SMALL LETTER J
+U+006B   # Latin          k         LATIN SMALL LETTER K
+U+006C   # Latin          l         LATIN SMALL LETTER L
+U+006D   # Latin          m         LATIN SMALL LETTER M
+U+006E   # Latin          n         LATIN SMALL LETTER N
+U+006F   # Latin          o         LATIN SMALL LETTER O
+U+0070   # Latin          p         LATIN SMALL LETTER P
+U+0071   # Latin          q         LATIN SMALL LETTER Q
+U+0072   # Latin          r         LATIN SMALL LETTER R
+U+0073   # Latin          s         LATIN SMALL LETTER S
+U+0074   # Latin          t         LATIN SMALL LETTER T
+U+0075   # Latin          u         LATIN SMALL LETTER U
+U+0076   # Latin          v         LATIN SMALL LETTER V
+U+0077   # Latin          w         LATIN SMALL LETTER W
+U+0078   # Latin          x         LATIN SMALL LETTER X
+U+0079   # Latin          y         LATIN SMALL LETTER Y
+U+007A   # Latin          z         LATIN SMALL LETTER Z
+U+00DF   # Latin          ß         LATIN SMALL LETTER SHARP S
+U+00E4   # Latin          ä         LATIN SMALL LETTER A WITH DIAERESIS
+U+00F6   # Latin          ö         LATIN SMALL LETTER O WITH DIAERESIS
+U+00FC   # Latin          ü         LATIN SMALL LETTER U WITH DIAERESIS
