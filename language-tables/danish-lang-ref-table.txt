@@ -1,8 +1,8 @@
 # IDN Reference table for Danish language
 
 # Language: Danish (da)
-# Version: 1.0
-# Date: 2014-10-09
+# Version: 1.1
+# Date: 2014-11-28
 # Unicode version: 6.3.0
 
 # This IDN table is published on <https://github.com/dotse/IDN-ref-tables> where 
@@ -10,7 +10,12 @@
 # purpose, creation and update of the tables.
 #
 # This IDN table has been created by .SE <https://www.iis.se/english/> mainly based 
-# on the material in the listed references. Anyone is free to use the tables.
+# on the material in the listed references. 
+#
+# .SE has put this work into Public Domain in accordance with CC0 1.0 Universal.
+# See <http://creativecommons.org/publicdomain/zero/1.0/> for the conditions. You 
+# can copy, modify, distribute and perform the work, even for commercial purposes, 
+# all without asking permission.
 
 
 ## Language references
