@@ -1,0 +1,93 @@
+# IDN Reference table for the Macedonian language
+
+# Language: Macedonian (mk)
+# Version: 1.0
+# Date: 2014-12-10
+# Unicode version: 6.3.0
+
+# This IDN table is published on <https://github.com/dotse/IDN-ref-tables> where 
+# you can find the latest version, other tables and information concerning the 
+# purpose, creation and update of the tables.
+#
+# This IDN table has been created by .SE <https://www.iis.se/english/> mainly based 
+# on the material in the listed references. 
+#
+# .SE has put this work into Public Domain in accordance with CC0 1.0 Universal.
+# See <http://creativecommons.org/publicdomain/zero/1.0/> for the conditions. You 
+# can copy, modify, distribute and perform the work, even for commercial purposes, 
+# all without asking permission.
+
+
+## Language references
+#
+# Wikipedia: "Macedonian orthography", http://en.wikipedia.org/wiki/Macedonian_alphabet
+#
+# In "Omniglot" - the online encyclopedia of writing systems and languages, 
+#    http://www.omniglot.com/writing/macedonian.htm
+#
+# Daniels, Peter T. & Bright, William: "The world's writing systems", page 704
+
+## References for contextual rules
+#
+# RFC 5891: “Internationalized Domain Names in Applications (IDNA): Protocol” 
+#    (proposed standard), http://tools.ietf.org/html/rfc5891
+
+
+## Code points requiring contextual rules
+#
+# Code point                        Description of rule/Reference
+#
+# U+002D                            Label must neither start nor end with U+002D. Label 
+#   HYPHEN-MINUS                    must not have U+002D in both third and fourth
+#                                   position. RFC 5891 (sec 4.2.3.1)
+
+
+## Code point table
+#
+# Code   # Unicode        Specimen  Name
+# point  # script         Glyph 
+#
+U+002D   # Common         -         HYPHEN-MINUS
+U+0030   # Common         0         DIGIT ZERO
+U+0031   # Common         1         DIGIT ONE
+U+0032   # Common         2         DIGIT TWO
+U+0033   # Common         3         DIGIT THREE
+U+0034   # Common         4         DIGIT FOUR
+U+0035   # Common         5         DIGIT FIVE
+U+0036   # Common         6         DIGIT SIX
+U+0037   # Common         7         DIGIT SEVEN
+U+0038   # Common         8         DIGIT EIGHT
+U+0039   # Common         9         DIGIT NINE
+#
+U+0430   # Cyrillic       а         CYRILLIC SMALL LETTER A
+U+0431   # Cyrillic       б         CYRILLIC SMALL LETTER BE
+U+0432   # Cyrillic       в         CYRILLIC SMALL LETTER VE
+U+0433   # Cyrillic       г         CYRILLIC SMALL LETTER GHE
+U+0434   # Cyrillic       д         CYRILLIC SMALL LETTER DE
+U+0435   # Cyrillic       е         CYRILLIC SMALL LETTER IE
+U+0436   # Cyrillic       ж         CYRILLIC SMALL LETTER ZHE
+U+0437   # Cyrillic       з         CYRILLIC SMALL LETTER ZE
+U+0438   # Cyrillic       и         CYRILLIC SMALL LETTER I
+U+043A   # Cyrillic       к         CYRILLIC SMALL LETTER KA
+U+043B   # Cyrillic       л         CYRILLIC SMALL LETTER EL
+U+043C   # Cyrillic       м         CYRILLIC SMALL LETTER EM
+U+043D   # Cyrillic       н         CYRILLIC SMALL LETTER EN
+U+043E   # Cyrillic       о         CYRILLIC SMALL LETTER O
+U+043F   # Cyrillic       п         CYRILLIC SMALL LETTER PE
+U+0440   # Cyrillic       р         CYRILLIC SMALL LETTER ER
+U+0441   # Cyrillic       с         CYRILLIC SMALL LETTER ES
+U+0442   # Cyrillic       т         CYRILLIC SMALL LETTER TE
+U+0443   # Cyrillic       у         CYRILLIC SMALL LETTER U
+U+0444   # Cyrillic       ф         CYRILLIC SMALL LETTER EF
+U+0445   # Cyrillic       х         CYRILLIC SMALL LETTER HA
+U+0446   # Cyrillic       ц         CYRILLIC SMALL LETTER TSE
+U+0447   # Cyrillic       ч         CYRILLIC SMALL LETTER CHE
+U+0448   # Cyrillic       ш         CYRILLIC SMALL LETTER SHA
+U+0455   # Cyrillic       ѕ         CYRILLIC SMALL LETTER DZE
+U+0458   # Cyrillic       ј         CYRILLIC SMALL LETTER JE
+U+0459   # Cyrillic       љ         CYRILLIC SMALL LETTER LJE
+U+045A   # Cyrillic       њ         CYRILLIC SMALL LETTER NJE
+U+045C   # Cyrillic       ќ         CYRILLIC SMALL LETTER KJE
+U+045F   # Cyrillic       џ         CYRILLIC SMALL LETTER DZHE
+U+0491   # Cyrillic       ґ         CYRILLIC SMALL LETTER GHE WITH UPTURN
+
