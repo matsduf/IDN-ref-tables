@@ -1,0 +1,100 @@
+# IDN Reference table for Georgian (Mkhedruli) script
+
+# Script: geor
+# Version: 1.0
+# Date: 2015-01-19
+# Unicode version: 6.3.0
+
+# This IDN table is published on <https://github.com/dotse/IDN-ref-tables> where 
+# you can find the latest version, other tables and information concerning the 
+# purpose, creation and update of the tables.
+#
+# This IDN table has been created by .SE <https://www.iis.se/english/> mainly based 
+# on the material in the listed references. 
+#
+# .SE has put this work into Public Domain in accordance with CC0 1.0 Universal.
+# See <http://creativecommons.org/publicdomain/zero/1.0/> for the conditions. You 
+# can copy, modify, distribute and perform the work, even for commercial purposes, 
+# all without asking permission.
+
+
+## Script references
+#
+# "Maximal Starting Repertoire - MSR-1. Annotated Repertoire Tables, Non-CJK", pp. 73-74, 
+#    https://www.icann.org/en/system/files/files/msr-non-cjk-06jun14-en.pdf,
+#    Linked from https://www.icann.org/news/announcement-2-2014-06-20-en
+#
+# "Georgian scripts", http://en.wikipedia.org/wiki/Georgian_scripts
+#
+# Daniels, Peter T. & Bright, William: "The world's writing systems", pp. 364-369
+
+
+## References for contextual rules
+#
+# RFC 5891: “Internationalized Domain Names in Applications (IDNA): Protocol” 
+#    (proposed standard), http://tools.ietf.org/html/rfc5891
+
+
+## Code points requiring contextual rules
+#
+# Code point                  Description of rule/Reference
+#
+# U+002D                      Label must neither start nor end with U+002D. Label 
+#    HYPHEN-MINUS             must not have U+002D in both third and fourth
+#                             position. RFC 5891 (sec 4.2.3.1)
+
+
+## Code point table
+#
+# Code   # Unicode        Specimen  Name
+# point  # script         Glyph 
+U+002D   # Common         -         HYPHEN-MINUS
+U+0030   # Common         0         DIGIT ZERO
+U+0031   # Common         1         DIGIT ONE
+U+0032   # Common         2         DIGIT TWO
+U+0033   # Common         3         DIGIT THREE
+U+0034   # Common         4         DIGIT FOUR
+U+0035   # Common         5         DIGIT FIVE
+U+0036   # Common         6         DIGIT SIX
+U+0037   # Common         7         DIGIT SEVEN
+U+0038   # Common         8         DIGIT EIGHT
+U+0039   # Common         9         DIGIT NINE
+#
+U+10D0   # Georgian       ა         GEORGIAN LETTER AN
+U+10D1   # Georgian       ბ         GEORGIAN LETTER BAN
+U+10D2   # Georgian       გ         GEORGIAN LETTER GAN
+U+10D3   # Georgian       დ         GEORGIAN LETTER DON
+U+10D4   # Georgian       ე         GEORGIAN LETTER EN
+U+10D5   # Georgian       ვ         GEORGIAN LETTER VIN
+U+10D6   # Georgian       ზ         GEORGIAN LETTER ZEN
+U+10D7   # Georgian       თ         GEORGIAN LETTER TAN
+U+10D8   # Georgian       ი         GEORGIAN LETTER IN
+U+10D9   # Georgian       კ         GEORGIAN LETTER KAN
+U+10DA   # Georgian       ლ         GEORGIAN LETTER LAS
+U+10DB   # Georgian       მ         GEORGIAN LETTER MAN
+U+10DC   # Georgian       ნ         GEORGIAN LETTER NAR
+U+10DD   # Georgian       ო         GEORGIAN LETTER ON
+U+10DE   # Georgian       პ         GEORGIAN LETTER PAR
+U+10DF   # Georgian       ჟ         GEORGIAN LETTER ZHAR
+U+10E0   # Georgian       რ         GEORGIAN LETTER RAE
+U+10E1   # Georgian       ს         GEORGIAN LETTER SAN
+U+10E2   # Georgian       ტ         GEORGIAN LETTER TAR
+U+10E3   # Georgian       უ         GEORGIAN LETTER UN
+U+10E4   # Georgian       ფ         GEORGIAN LETTER PHAR
+U+10E5   # Georgian       ქ         GEORGIAN LETTER KHAR
+U+10E6   # Georgian       ღ         GEORGIAN LETTER GHAN
+U+10E7   # Georgian       ყ         GEORGIAN LETTER QAR
+U+10E8   # Georgian       შ         GEORGIAN LETTER SHIN
+U+10E9   # Georgian       ჩ         GEORGIAN LETTER CHIN
+U+10EA   # Georgian       ც         GEORGIAN LETTER CAN
+U+10EB   # Georgian       ძ         GEORGIAN LETTER JIL
+U+10EC   # Georgian       წ         GEORGIAN LETTER CIL
+U+10ED   # Georgian       ჭ         GEORGIAN LETTER CHAR
+U+10EE   # Georgian       ხ         GEORGIAN LETTER XAN
+U+10EF   # Georgian       ჯ         GEORGIAN LETTER JHAN
+U+10F0   # Georgian       ჰ         GEORGIAN LETTER HAE
+U+10F4   # Georgian       ჴ         GEORGIAN LETTER HAR
+U+10F6   # Georgian       ჶ         GEORGIAN LETTER FI
+U+10F7   # Georgian       ჷ         GEORGIAN LETTER YN
+U+10F8   # Georgian       ჸ         GEORGIAN LETTER ELIFI
+
