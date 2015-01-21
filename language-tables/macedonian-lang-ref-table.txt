@@ -1,7 +1,7 @@
 # IDN Reference table for the Macedonian language
 
 # Language: Macedonian (mk)
-# Version: 1.1
+# Version: 1.2
 # Date: 2015-01-21
 # Unicode version: 6.3.0
 
@@ -97,3 +97,13 @@ U+045C   # Cyrillic       ќ         CYRILLIC SMALL LETTER KJE
 U+045F   # Cyrillic       џ         CYRILLIC SMALL LETTER DZHE
 U+0491   # Cyrillic       ґ         CYRILLIC SMALL LETTER GHE WITH UPTURN
 
+
+# Change history
+#
+# Version    Date        Comment
+# 1.0        2014-12-10  First version
+#
+# 1.1        2015-01-21  U+0452 added based on info in RFC 5992.
+#                        RFC 5992 added as reference.
+#
+# 1.2        2015-01-21  "Change history" section added.
