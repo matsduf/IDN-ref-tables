@@ -1,0 +1,191 @@
+# IDN Reference table for Thai script
+
+# Script: thai
+# Version: 1.0
+# Date: 2015-03-10
+# Unicode version: 6.3.0
+
+# This IDN table is published on <https://github.com/dotse/IDN-ref-tables> where 
+# you can find the latest version, other tables and information concerning the 
+# purpose, creation and update of the tables.
+#
+# This IDN table has been created by .SE <https://www.iis.se/english/> mainly based 
+# on the material in the listed references. 
+#
+# .SE has put this work into Public Domain in accordance with CC0 1.0 Universal.
+# See <http://creativecommons.org/publicdomain/zero/1.0/> for the conditions. You 
+# can copy, modify, distribute and perform the work, even for commercial purposes, 
+# all without asking permission.
+
+
+## Script references
+#
+# "Maximal Starting Repertoire - MSR-1. Annotated Repertoire Tables, Non-CJK", 
+#    pp. 68-69, 
+#    https://www.icann.org/en/system/files/files/msr-non-cjk-06jun14-en.pdf,
+#    Linked from https://www.icann.org/news/announcement-2-2014-06-20-en
+#
+# "Thai alphabet", http://en.wikipedia.org/wiki/Thai_alphabet
+#
+# Daniels, Peter T. & Bright, William: "The world's writing systems", pp. 457-466
+#
+# In "Omniglot" - the online encyclopedia of writing systems and languages, 
+# http://www.omniglot.com/writing/thai.htm
+
+
+## References for contextual rules
+#
+# RFC 5891: “Internationalized Domain Names in Applications (IDNA): Protocol” 
+#    (proposed standard), http://tools.ietf.org/html/rfc5891
+#
+# ".SCB IDN Registration Policy" by Thai Name Server Co.,Ltd,
+#    http://web.thains.co.th/docs/scb/SCB_IDN_Policy.pdf
+#
+# Also see the script references above.
+
+
+## Code points requiring contextual rules
+#
+# Code point                  Description of rule/Reference
+#
+# U+002D                      Label must neither start nor end with U+002D. Label 
+#    HYPHEN-MINUS             must not have U+002D in both third and fourth
+#                             position. RFC 5891 (sec 4.2.3.1)
+#
+#
+# U+0E31, 0E34..0E3A,         Not in initial position. RFC 5891 (4.2.3.2).
+# 0E46..0E4E
+#    Marks and Modifier
+#    Letter
+#
+# 0E40..0E44                  Must be directly followed by a code point of 
+#    Leasding Vowels          0E01..0E2E.
+#
+# U+0E31, U+0E34..U+0E37,     Must be directly preceded by a code point of 
+# U+0E47, U+0E4C..U+0E4D      0E01..0E2E.
+#    Upper Vowel Symbol
+#    and Upper Diacritics
+#
+# 0E48..0E4B                  Must be directly preceded by a code point of 
+#    Tone Marks               0E01..0E2E or U+0E31, U+0E34..U+0E37, U+0E47, 
+#                             U+0E4C..U+0E4E. Must not be followed by a
+#                             code point of U+0E31, U+0E34..U+0E37, U+0E47, 
+#                             U+0E4C..U+0E4E.
+#
+# U+0E30, U+0E32, U+0E45      Must be directly preceded by a code point of 
+#    Following Vowels         0E01..0E2E or a code point of U+0E31, 
+#                             U+0E34..U+0E37, U+0E47, U+0E4C..U+0E4E or a
+#                             code point of 0E48..0E4B.
+#
+# U+0E38..U+0E3A              Must be directly preceded by a code point of 
+#    Lower Vowel Symbols      0E01..0E2E or a code point of U+0E31, 
+#                             U+0E34..U+0E37, U+0E47, U+0E4C..U+0E4E or a
+#                             code point of 0E48..0E4B.
+
+
+## Code point table
+#
+# Code   # Unicode   Specimen  Name
+# point  # script    Glyph 
+U+002D   # Common    -         HYPHEN-MINUS
+U+0030   # Common    0         DIGIT ZERO
+U+0031   # Common    1         DIGIT ONE
+U+0032   # Common    2         DIGIT TWO
+U+0033   # Common    3         DIGIT THREE
+U+0034   # Common    4         DIGIT FOUR
+U+0035   # Common    5         DIGIT FIVE
+U+0036   # Common    6         DIGIT SIX
+U+0037   # Common    7         DIGIT SEVEN
+U+0038   # Common    8         DIGIT EIGHT
+U+0039   # Common    9         DIGIT NINE
+#
+U+0E01   # Thai      ก         THAI CHARACTER KO KAI
+U+0E02   # Thai      ข         THAI CHARACTER KHO KHAI
+U+0E03   # Thai      ฃ         THAI CHARACTER KHO KHUAT
+U+0E04   # Thai      ค         THAI CHARACTER KHO KHWAI
+U+0E05   # Thai      ฅ         THAI CHARACTER KHO KHON
+U+0E06   # Thai      ฆ         THAI CHARACTER KHO RAKHANG
+U+0E07   # Thai      ง         THAI CHARACTER NGO NGU
+U+0E08   # Thai      จ         THAI CHARACTER CHO CHAN
+U+0E09   # Thai      ฉ         THAI CHARACTER CHO CHING
+U+0E0A   # Thai      ช         THAI CHARACTER CHO CHANG
+U+0E0B   # Thai      ซ         THAI CHARACTER SO SO
+U+0E0C   # Thai      ฌ         THAI CHARACTER CHO CHOE
+U+0E0D   # Thai      ญ         THAI CHARACTER YO YING
+U+0E0E   # Thai      ฎ         THAI CHARACTER DO CHADA
+U+0E0F   # Thai      ฏ         THAI CHARACTER TO PATAK
+U+0E10   # Thai      ฐ         THAI CHARACTER THO THAN
+U+0E11   # Thai      ฑ         THAI CHARACTER THO NANGMONTHO
+U+0E12   # Thai      ฒ         THAI CHARACTER THO PHUTHAO
+U+0E13   # Thai      ณ         THAI CHARACTER NO NEN
+U+0E14   # Thai      ด         THAI CHARACTER DO DEK
+U+0E15   # Thai      ต         THAI CHARACTER TO TAO
+U+0E16   # Thai      ถ         THAI CHARACTER THO THUNG
+U+0E17   # Thai      ท         THAI CHARACTER THO THAHAN
+U+0E18   # Thai      ธ         THAI CHARACTER THO THONG
+U+0E19   # Thai      น         THAI CHARACTER NO NU
+U+0E1A   # Thai      บ         THAI CHARACTER BO BAIMAI
+U+0E1B   # Thai      ป         THAI CHARACTER PO PLA
+U+0E1C   # Thai      ผ         THAI CHARACTER PHO PHUNG
+U+0E1D   # Thai      ฝ         THAI CHARACTER FO FA
+U+0E1E   # Thai      พ         THAI CHARACTER PHO PHAN
+U+0E1F   # Thai      ฟ         THAI CHARACTER FO FAN
+U+0E20   # Thai      ภ         THAI CHARACTER PHO SAMPHAO
+U+0E21   # Thai      ม         THAI CHARACTER MO MA
+U+0E22   # Thai      ย         THAI CHARACTER YO YAK
+U+0E23   # Thai      ร         THAI CHARACTER RO RUA
+U+0E24   # Thai      ฤ         THAI CHARACTER RU
+U+0E25   # Thai      ล         THAI CHARACTER LO LING
+U+0E26   # Thai      ฦ         THAI CHARACTER LU
+U+0E27   # Thai      ว         THAI CHARACTER WO WAEN
+U+0E28   # Thai      ศ         THAI CHARACTER SO SALA
+U+0E29   # Thai      ษ         THAI CHARACTER SO RUSI
+U+0E2A   # Thai      ส         THAI CHARACTER SO SUA
+U+0E2B   # Thai      ห         THAI CHARACTER HO HIP
+U+0E2C   # Thai      ฬ         THAI CHARACTER LO CHULA
+U+0E2D   # Thai      อ         THAI CHARACTER O ANG
+U+0E2E   # Thai      ฮ         THAI CHARACTER HO NOKHUK
+U+0E2F   # Thai      ฯ         THAI CHARACTER PAIYANNOI
+U+0E30   # Thai      ะ         THAI CHARACTER SARA A
+U+0E31   # Thai      ั         THAI CHARACTER MAI HAN-AKAT
+U+0E32   # Thai      า         THAI CHARACTER SARA AA
+U+0E34   # Thai      ิ         THAI CHARACTER SARA I
+U+0E35   # Thai      ี         THAI CHARACTER SARA II
+U+0E36   # Thai      ึ         THAI CHARACTER SARA UE
+U+0E37   # Thai      ื         THAI CHARACTER SARA UEE
+U+0E38   # Thai      ุ         THAI CHARACTER SARA U
+U+0E39   # Thai      ู         THAI CHARACTER SARA UU
+U+0E3A   # Thai      ฺ         THAI CHARACTER PHINTHU
+U+0E40   # Thai      เ         THAI CHARACTER SARA E
+U+0E41   # Thai      แ         THAI CHARACTER SARA AE
+U+0E42   # Thai      โ         THAI CHARACTER SARA O
+U+0E43   # Thai      ใ         THAI CHARACTER SARA AI MAIMUAN
+U+0E44   # Thai      ไ         THAI CHARACTER SARA AI MAIMALAI
+U+0E45   # Thai      ๅ         THAI CHARACTER LAKKHANGYAO
+U+0E46   # Thai      ๆ         THAI CHARACTER MAIYAMOK
+U+0E47   # Thai      ็         THAI CHARACTER MAITAIKHU
+U+0E48   # Thai      ่         THAI CHARACTER MAI EK
+U+0E49   # Thai      ้         THAI CHARACTER MAI THO
+U+0E4A   # Thai      ๊         THAI CHARACTER MAI TRI
+U+0E4B   # Thai      ๋         THAI CHARACTER MAI CHATTAWA
+U+0E4C   # Thai      ์         THAI CHARACTER THANTHAKHAT
+U+0E4D   # Thai      ํ         THAI CHARACTER NIKHAHIT
+U+0E4E   # Thai      ๎         THAI CHARACTER YAMAKKAN
+U+0E50   # Thai      ๐         THAI DIGIT ZERO
+U+0E51   # Thai      ๑         THAI DIGIT ONE
+U+0E52   # Thai      ๒         THAI DIGIT TWO
+U+0E53   # Thai      ๓         THAI DIGIT THREE
+U+0E54   # Thai      ๔         THAI DIGIT FOUR
+U+0E55   # Thai      ๕         THAI DIGIT FIVE
+U+0E56   # Thai      ๖         THAI DIGIT SIX
+U+0E57   # Thai      ๗         THAI DIGIT SEVEN
+U+0E58   # Thai      ๘         THAI DIGIT EIGHT
+U+0E59   # Thai      ๙         THAI DIGIT NINE
+
+
+## Change history
+#
+# Version    Date        Comment
+# 1.0        2015-03-10  First version.
+#
+
