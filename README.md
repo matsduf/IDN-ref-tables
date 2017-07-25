@@ -28,3 +28,10 @@ Use of tables
 
 Anyone is free to use and modify the IDN tables available in this repository for their own purposes.
 
+
+Updates
+-------
+
+2017-07-25: All reference tables are now available both in text (.txt) and LGR (.xml) format. For the LGR format, see [RFC 7940](https://tools.ietf.org/html/rfc7940). Both tables have the same content, only the format differs.
+
+

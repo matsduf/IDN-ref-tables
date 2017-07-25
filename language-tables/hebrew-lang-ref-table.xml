@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='utf-8'?>
+<lgr xmlns="urn:ietf:params:xml:ns:lgr-1.0">
+  <meta>
+    <version comment="IDN Reference table for Hebrew language">1.2</version>
+    <date>2017-05-16</date>
+    <unicode-version>6.3.0</unicode-version>
+    <language>he</language>
+    <description type="text/plain"><![CDATA[
+This IDN table is published on <https://github.com/dotse/IDN-ref-tables> where 
+you can find the latest version, other tables and information concerning the 
+purpose, creation and update of the tables.
+
+This IDN table has been created by .SE <https://www.iis.se/english/> mainly based 
+on the material in the listed references. 
+
+.SE has put this work into Public Domain in accordance with CC0 1.0 Universal.
+See <http://creativecommons.org/publicdomain/zero/1.0/> for the conditions. You 
+can copy, modify, distribute and perform the work, even for commercial purposes, 
+all without asking permission.
+
+
+## Language references
+
+Wikipedia: "Hebrew orthography", http://en.wikipedia.org/wiki/Hebrew_alphabet
+
+In "Omniglot" - the online encyclopedia of writing systems and languages,
+   http://www.omniglot.com/writing/hebrew.htm
+
+
+## References for contextual rules
+
+RFC 5891: "Internationalized Domain Names in Applications (IDNA): Protocol" 
+   (proposed standard), http://tools.ietf.org/html/rfc5891
+
+RFC 5893: "Right-to-Left Scripts for Internationalized Domain Names for Applications
+   (IDNA)" (proposed standard), http://tools.ietf.org/html/rfc5893
+
+
+## Code points requiring contextual rules
+
+Code point                        Description of rule/Reference
+
+U+002D                            Label must neither start nor end with U+002D. Label 
+   HYPHEN-MINUS                   must not have U+002D in both third and fourth
+                                  position. RFC 5891 (sec 4.2.3.1)
+
+0030..0039                        Must not be in initial position. RFC 5893 (sec 2,
+   DIGITS                         rule 1)
+    ]]></description>
+  </meta>
+  <data>
+    <char cp="002D" not-when="hyphen-minus-disallowed" />
+    <char cp="0030" not-when="leading-digit" />
+    <char cp="0031" not-when="leading-digit" />
+    <char cp="0032" not-when="leading-digit" />
+    <char cp="0033" not-when="leading-digit" />
+    <char cp="0034" not-when="leading-digit" />
+    <char cp="0035" not-when="leading-digit" />
+    <char cp="0036" not-when="leading-digit" />
+    <char cp="0037" not-when="leading-digit" />
+    <char cp="0038" not-when="leading-digit" />
+    <char cp="0039" not-when="leading-digit" />
+    <char cp="05D0"/>
+    <char cp="05D1"/>
+    <char cp="05D2"/>
+    <char cp="05D3"/>
+    <char cp="05D4"/>
+    <char cp="05D5"/>
+    <char cp="05D6"/>
+    <char cp="05D7"/>
+    <char cp="05D8"/>
+    <char cp="05D9"/>
+    <char cp="05DA"/>
+    <char cp="05DB"/>
+    <char cp="05DC"/>
+    <char cp="05DD"/>
+    <char cp="05DE"/>
+    <char cp="05DF"/>
+    <char cp="05E0"/>
+    <char cp="05E1"/>
+    <char cp="05E2"/>
+    <char cp="05E3"/>
+    <char cp="05E4"/>
+    <char cp="05E5"/>
+    <char cp="05E6"/>
+    <char cp="05E7"/>
+    <char cp="05E8"/>
+    <char cp="05E9"/>
+    <char cp="05EA"/>
+  </data>
+  <rules>
+    <rule name="hyphen-minus-disallowed" comment="RFC5891 restrictions on placement of U+002D">
+      <choice>
+        <rule comment="no leading hyphen">
+          <look-behind>
+            <start/>
+          </look-behind>
+          <anchor/>
+        </rule>
+        <rule comment="no trailing hyphen">
+          <anchor/>
+          <look-ahead>
+            <end/>
+          </look-ahead>
+        </rule>
+        <rule comment="no consecutive hyphens in third and fourth">
+          <look-behind>
+            <start/>
+            <any/>
+            <any/>
+            <char cp="002D" comment="hyphen-minus"/>
+          </look-behind>
+          <anchor/>
+        </rule>
+      </choice>
+    </rule>
+    <rule name="leading-digit" comment="RFC5893 restrictions on placement of European digit">
+      <look-behind>
+        <start />
+      </look-behind>
+      <anchor />
+    </rule>
+    <action disp="valid" comment="catch all"/>
+  </rules>
+</lgr>

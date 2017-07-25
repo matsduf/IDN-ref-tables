@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='utf-8'?>
+<lgr xmlns="urn:ietf:params:xml:ns:lgr-1.0">
+  <meta>
+    <version comment="IDN Reference table for Thai script">1.1</version>
+    <date>2017-05-19</date>
+    <unicode-version>6.3.0</unicode-version>
+    <description type="text/plain"><![CDATA[
+This IDN table is published on <https://github.com/dotse/IDN-ref-tables> where 
+you can find the latest version, other tables and information concerning the 
+purpose, creation and update of the tables.
+
+This IDN table has been created by .SE <https://www.iis.se/english/> mainly based 
+on the material in the listed references. 
+
+.SE has put this work into Public Domain in accordance with CC0 1.0 Universal.
+See <http://creativecommons.org/publicdomain/zero/1.0/> for the conditions. You 
+can copy, modify, distribute and perform the work, even for commercial purposes, 
+all without asking permission.
+
+
+## Script references
+
+"Maximal Starting Repertoire - MSR-1. Annotated Repertoire Tables, Non-CJK", 
+   pp. 68-69, 
+   https://www.icann.org/en/system/files/files/msr-non-cjk-06jun14-en.pdf,
+   Linked from https://www.icann.org/news/announcement-2-2014-06-20-en
+
+"Thai alphabet", http://en.wikipedia.org/wiki/Thai_alphabet
+
+Daniels, Peter T. & Bright, William: "The world's writing systems", pp. 457-466
+
+In "Omniglot" - the online encyclopedia of writing systems and languages, 
+http://www.omniglot.com/writing/thai.htm
+
+
+## References for contextual rules
+
+RFC 5891: “Internationalized Domain Names in Applications (IDNA): Protocol” 
+   (proposed standard), http://tools.ietf.org/html/rfc5891
+
+".SCB IDN Registration Policy" by Thai Name Server Co.,Ltd,
+   http://web.thains.co.th/docs/scb/SCB_IDN_Policy.pdf
+
+Also see the script references above.
+
+
+## Code points requiring contextual rules
+
+Code point                  Description of rule/Reference
+
+U+002D                      Label must neither start nor end with U+002D. Label 
+   HYPHEN-MINUS             must not have U+002D in both third and fourth
+                            position. RFC 5891 (sec 4.2.3.1)
+
+
+U+0E31, 0E34..0E3A,         Not in initial position. RFC 5891 (4.2.3.2).
+0E46..0E4E
+   Marks and Modifier
+   Letter
+
+0E40..0E44                  Must be directly followed by a code point of 
+   Leasding Vowels          0E01..0E2E.
+
+U+0E31, U+0E34..U+0E37,     Must be directly preceded by a code point of 
+U+0E47, U+0E4C..U+0E4D      0E01..0E2E.
+   Upper Vowel Symbol
+   and Upper Diacritics
+
+0E48..0E4B                  Must be directly preceded by a code point of 
+   Tone Marks               0E01..0E2E or U+0E31, U+0E34..U+0E37, U+0E47, 
+                            U+0E4C..U+0E4E. Must not be followed by a
+                            code point of U+0E31, U+0E34..U+0E37, U+0E47, 
+                            U+0E4C..U+0E4E.
+
+U+0E30, U+0E32, U+0E45      Must be directly preceded by a code point of 
+   Following Vowels         0E01..0E2E or a code point of U+0E31, 
+                            U+0E34..U+0E37, U+0E47, U+0E4C..U+0E4E or a
+                            code point of 0E48..0E4B.
+
+U+0E38..U+0E3A              Must be directly preceded by a code point of 
+   Lower Vowel Symbols      0E01..0E2E or a code point of U+0E31, 
+                            U+0E34..U+0E37, U+0E47, U+0E4C..U+0E4E or a
+                            code point of 0E48..0E4B.
+    ]]></description>
+  </meta>
+  <data>
+    <char cp="002D" not-when="hyphen-minus-disallowed" />
+    <char cp="0030"/>
+    <char cp="0031"/>
+    <char cp="0032"/>
+    <char cp="0033"/>
+    <char cp="0034"/>
+    <char cp="0035"/>
+    <char cp="0036"/>
+    <char cp="0037"/>
+    <char cp="0038"/>
+    <char cp="0039"/>
+    <char cp="0E01"/>
+    <char cp="0E02"/>
+    <char cp="0E03"/>
+    <char cp="0E04"/>
+    <char cp="0E05"/>
+    <char cp="0E06"/>
+    <char cp="0E07"/>
+    <char cp="0E08"/>
+    <char cp="0E09"/>
+    <char cp="0E0A"/>
+    <char cp="0E0B"/>
+    <char cp="0E0C"/>
+    <char cp="0E0D"/>
+    <char cp="0E0E"/>
+    <char cp="0E0F"/>
+    <char cp="0E10"/>
+    <char cp="0E11"/>
+    <char cp="0E12"/>
+    <char cp="0E13"/>
+    <char cp="0E14"/>
+    <char cp="0E15"/>
+    <char cp="0E16"/>
+    <char cp="0E17"/>
+    <char cp="0E18"/>
+    <char cp="0E19"/>
+    <char cp="0E1A"/>
+    <char cp="0E1B"/>
+    <char cp="0E1C"/>
+    <char cp="0E1D"/>
+    <char cp="0E1E"/>
+    <char cp="0E1F"/>
+    <char cp="0E20"/>
+    <char cp="0E21"/>
+    <char cp="0E22"/>
+    <char cp="0E23"/>
+    <char cp="0E24"/>
+    <char cp="0E25"/>
+    <char cp="0E26"/>
+    <char cp="0E27"/>
+    <char cp="0E28"/>
+    <char cp="0E29"/>
+    <char cp="0E2A"/>
+    <char cp="0E2B"/>
+    <char cp="0E2C"/>
+    <char cp="0E2D"/>
+    <char cp="0E2E"/>
+    <char cp="0E2F"/>
+    <char cp="0E30" when="after-thai-preceeding-following-vowel-symbols" />
+    <char cp="0E31" not-when="not-at-start" when="after-thai-consonant-characters" />
+    <char cp="0E32" when="after-thai-preceeding-following-vowel-symbols" />
+    <char cp="0E34" when="after-thai-consonant-characters" />
+    <char cp="0E35" when="after-thai-consonant-characters" />
+    <char cp="0E36" when="after-thai-consonant-characters" />
+    <char cp="0E37" when="after-thai-consonant-characters" />
+    <char cp="0E38" when="between-aaa-and-bbb" />
+    <char cp="0E39" when="between-aaa-and-bbb" />
+    <char cp="0E3A" when="between-aaa-and-bbb" />
+    <char cp="0E40" when="before-thai-consonant-characters" />
+    <char cp="0E41" when="before-thai-consonant-characters" />
+    <char cp="0E42" when="before-thai-consonant-characters" />
+    <char cp="0E43" when="before-thai-consonant-characters" />
+    <char cp="0E44" when="before-thai-consonant-characters" />
+    <char cp="0E45" when="after-thai-preceeding-following-vowel-symbols" />
+    <char cp="0E46" not-when="not-at-start" />
+    <char cp="0E47" when="after-thai-consonant-characters" />
+    <char cp="0E48" not-when="not-at-start" />
+    <char cp="0E49" not-when="not-at-start" />
+    <char cp="0E4A" not-when="not-at-start" />
+    <char cp="0E4B" not-when="not-at-start" />
+    <char cp="0E4C" when="after-thai-consonant-characters" />
+    <char cp="0E4D" when="after-thai-consonant-characters" />
+    <char cp="0E4E" not-when="not-at-start" />
+    <char cp="0E50"/>
+    <char cp="0E51"/>
+    <char cp="0E52"/>
+    <char cp="0E53"/>
+    <char cp="0E54"/>
+    <char cp="0E55"/>
+    <char cp="0E56"/>
+    <char cp="0E57"/>
+    <char cp="0E58"/>
+    <char cp="0E59"/>
+  </data>
+
+  <rules>
+
+	<class name="thai-marks-and-modifier-letter">0E31 0E34-0E3A 0E46-0E4E</class>
+	<class name="thai-leading-vowels">0E40-0E44</class>
+	<class name="thai-upper-vowels-diacritics">0E31 0E34-0E37 0E47 0E4C-0E4D</class>
+	<class name="thai-tone-marks">0E48-0E4B</class>
+	<class name="thai-following-vowels">0E30 0E32 0E45</class>
+	<class name="thai-lower-vowels-symbols">0E38-0E3A</class>
+	<class name="thai-consonant-characters">0E01-0E2E</class>
+	<class name="thai-preceeding-following-vowel-symbols">0E01-0E2E 0E31 0E34-0E37 0E47 0E4C-0E4E 0E48-0E4B</class>
+	<class name="thai-aaa">0E01-0E2E 0E31 0E34-0E37 0E47 0E4C-0E4E</class>
+	<class name="thai-bbb">0E31 0E34-0E37 0E47 0E4C-0E4E</class>
+	
+  	<rule name="hyphen-minus-disallowed" comment="RFC5891 restrictions on placement of U+002D">
+      <choice>
+        <rule comment="no leading hyphen">
+          <look-behind>
+            <start/>
+          </look-behind>
+          <anchor/>
+        </rule>
+        <rule comment="no trailing hyphen">
+          <anchor/>
+          <look-ahead>
+            <end/>
+          </look-ahead>
+        </rule>
+        <rule comment="no consecutive hyphens in third and fourth">
+          <look-behind>
+            <start/>
+            <any/>
+            <any/>
+            <char cp="002D" comment="hyphen-minus"/>
+          </look-behind>
+          <anchor/>
+        </rule>
+      </choice>
+    </rule>
+
+	<rule name="not-at-start" comment="these codepoints at the beginning is disallowed">
+		<look-behind>
+       		<start/>
+           	<rule>
+				<class by-ref="thai-marks-and-modifier-letter"/>
+           	</rule>
+    	</look-behind>
+        <anchor/>
+	</rule>
+
+    <rule name="after-thai-consonant-characters" comment=" " >
+        <look-behind>
+            <class by-ref="thai-consonant-characters" />
+        </look-behind>
+        <anchor />
+    </rule>
+
+    <rule name="before-thai-consonant-characters" comment=" " >
+        <anchor />
+        <look-ahead>
+        	<choice>
+           		<start/>
+             	<rule>
+		            <class by-ref="thai-consonant-characters" />
+             	</rule>
+           	</choice>
+        </look-ahead>
+    </rule>
+
+    <rule name="after-thai-preceeding-following-vowel-symbols" comment=" " >
+        <look-behind>
+            <class by-ref="thai-preceeding-following-vowel-symbols" />
+        </look-behind>
+        <anchor />
+    </rule>
+
+       <rule name="between-aaa-and-bbb" comment=" ">
+           <look-behind>
+            <class by-ref="thai-aaa" />
+           </look-behind>
+           <anchor />
+           <look-ahead>
+           <choice count="1+">
+				<difference>
+					<class> 002D-0E59 </class>
+					<class by-ref="thai-bbb"/>
+				</difference>
+				<end/>
+		   </choice>
+           </look-ahead>
+       </rule>
+
+
+	<action disp="invalid" match="not-at-start" />	
+    <action disp="valid" comment="catch all"/>
+
+  </rules>
+</lgr>

@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='utf-8'?>
+<lgr xmlns="urn:ietf:params:xml:ns:lgr-1.0">
+  <meta>
+    <version comment="IDN Reference table for Georgian (Mkhedruli) script">1.1</version>
+    <unicode-version>6.3.0</unicode-version>
+    <description type="text/plain"><![CDATA[
+This IDN table is published on <https://github.com/dotse/IDN-ref-tables> where 
+you can find the latest version, other tables and information concerning the 
+purpose, creation and update of the tables.
+
+This IDN table has been created by .SE <https://www.iis.se/english/> mainly based 
+on the material in the listed references. 
+
+.SE has put this work into Public Domain in accordance with CC0 1.0 Universal.
+See <http://creativecommons.org/publicdomain/zero/1.0/> for the conditions. You 
+can copy, modify, distribute and perform the work, even for commercial purposes, 
+all without asking permission.
+
+
+## Script references
+
+"Maximal Starting Repertoire - MSR-1. Annotated Repertoire Tables, Non-CJK", pp. 73-74, 
+   https://www.icann.org/en/system/files/files/msr-non-cjk-06jun14-en.pdf,
+   Linked from https://www.icann.org/news/announcement-2-2014-06-20-en
+
+"Georgian scripts", http://en.wikipedia.org/wiki/Georgian_scripts
+
+Daniels, Peter T. & Bright, William: "The world's writing systems", pp. 364-369
+
+
+## References for contextual rules
+
+RFC 5891: “Internationalized Domain Names in Applications (IDNA): Protocol” 
+   (proposed standard), http://tools.ietf.org/html/rfc5891
+
+
+## Code points requiring contextual rules
+
+Code point                  Description of rule/Reference
+
+U+002D                      Label must neither start nor end with U+002D. Label 
+   HYPHEN-MINUS             must not have U+002D in both third and fourth
+                            position. RFC 5891 (sec 4.2.3.1)
+    ]]></description>
+  </meta>
+  <data>
+    <char cp="002D" not-when="hyphen-minus-disallowed" />
+    <char cp="0030"/>
+    <char cp="0031"/>
+    <char cp="0032"/>
+    <char cp="0033"/>
+    <char cp="0034"/>
+    <char cp="0035"/>
+    <char cp="0036"/>
+    <char cp="0037"/>
+    <char cp="0038"/>
+    <char cp="0039"/>
+    <char cp="10D0"/>
+    <char cp="10D1"/>
+    <char cp="10D2"/>
+    <char cp="10D3"/>
+    <char cp="10D4"/>
+    <char cp="10D5"/>
+    <char cp="10D6"/>
+    <char cp="10D7"/>
+    <char cp="10D8"/>
+    <char cp="10D9"/>
+    <char cp="10DA"/>
+    <char cp="10DB"/>
+    <char cp="10DC"/>
+    <char cp="10DD"/>
+    <char cp="10DE"/>
+    <char cp="10DF"/>
+    <char cp="10E0"/>
+    <char cp="10E1"/>
+    <char cp="10E2"/>
+    <char cp="10E3"/>
+    <char cp="10E4"/>
+    <char cp="10E5"/>
+    <char cp="10E6"/>
+    <char cp="10E7"/>
+    <char cp="10E8"/>
+    <char cp="10E9"/>
+    <char cp="10EA"/>
+    <char cp="10EB"/>
+    <char cp="10EC"/>
+    <char cp="10ED"/>
+    <char cp="10EE"/>
+    <char cp="10EF"/>
+    <char cp="10F0"/>
+    <char cp="10F4"/>
+    <char cp="10F6"/>
+    <char cp="10F7"/>
+    <char cp="10F8"/>
+  </data>
+  <rules>
+    <rule name="hyphen-minus-disallowed" comment="RFC5891 restrictions on placement of U+002D">
+      <choice>
+        <rule comment="no leading hyphen">
+          <look-behind>
+            <start/>
+          </look-behind>
+          <anchor/>
+        </rule>
+        <rule comment="no trailing hyphen">
+          <anchor/>
+          <look-ahead>
+            <end/>
+          </look-ahead>
+        </rule>
+        <rule comment="no consecutive hyphens in third and fourth">
+          <look-behind>
+            <start/>
+            <any/>
+            <any/>
+            <char cp="002D" comment="hyphen-minus"/>
+          </look-behind>
+          <anchor/>
+        </rule>
+      </choice>
+    </rule>
+    <action disp="valid" comment="catch all"/>
+  </rules>
+</lgr>

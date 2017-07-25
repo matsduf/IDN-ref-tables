@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='utf-8'?>
+<lgr xmlns="urn:ietf:params:xml:ns:lgr-1.0">
+  <meta>
+    <version comment="IDN Reference table for Devanagari script">1.2</version>
+    <unicode-version>6.3.0</unicode-version>
+    <description type="text/plain"><![CDATA[
+This IDN table is published on <https://github.com/dotse/IDN-ref-tables> where 
+you can find the latest version, other tables and information concerning the 
+purpose, creation and update of the tables.
+
+This IDN table has been created by .SE <https://www.iis.se/english/> mainly based 
+on the material in the listed references. 
+
+.SE has put this work into Public Domain in accordance with CC0 1.0 Universal.
+See <http://creativecommons.org/publicdomain/zero/1.0/> for the conditions. You 
+can copy, modify, distribute and perform the work, even for commercial purposes, 
+all without asking permission.
+
+
+## Script references
+
+Wikipedia: "Devanagari", http://en.wikipedia.org/wiki/Devanagari
+
+In "Omniglot" - the online encyclopedia of writing systems and languages, 
+   http://omniglot.com/writing/devanagari.htm
+
+Daniels, Peter T. & Bright, William: "The world's writing systems", page 384
+
+
+## References for contextual rules
+
+RFC 5891: “Internationalized Domain Names in Applications (IDNA): Protocol” 
+   (proposed standard), http://tools.ietf.org/html/rfc5891
+
+Unicode Technical Standard 46 (UTS-46), http://unicode.org/reports/tr46/
+
+
+## Code points requiring contextual rules
+
+Code point                  Description of rule/Reference
+
+U+002D                      Label must neither start nor end with U+002D. Label 
+   HYPHEN-MINUS             must not have U+002D in both third and fourth
+                            position. RFC 5891 (sec 4.2.3.1)
+
+0900..0903, U+093C,         Combining characters cannot start a label. UTS46 
+094D..094E, 0953..0954      (sec 4.1)
+  DEVANAGARI SIGNS
+
+093E..094C                  Dependent vowels, must be placed after their associated
+  DEVANAGARI DEPENDENT      consonant and thus cannot start a label. UTS46 (sec 4.1)
+  VOWEL SIGNS                     
+
+U+0955, U+0962, U+0963      Combining code point cannot start a label. UTS46 (sec 4.1)
+  DEVANAGARI VOWEL SIGNS
+
+A8E0..A8F1                  Combining code point cannot start a label. UTS46 (sec 4.1)
+    ]]></description>
+  </meta>
+  <data>
+    <char cp="002D" not-when="hyphen-minus-disallowed" />
+    <char cp="0030"/>
+    <char cp="0031"/>
+    <char cp="0032"/>
+    <char cp="0033"/>
+    <char cp="0034"/>
+    <char cp="0035"/>
+    <char cp="0036"/>
+    <char cp="0037"/>
+    <char cp="0038"/>
+    <char cp="0039"/>
+    <char cp="0900" not-when="not-at-start" />
+    <char cp="0901" not-when="not-at-start" />
+    <char cp="0902" not-when="not-at-start" />
+    <char cp="0903" not-when="not-at-start" />
+    <char cp="0904"/>
+    <char cp="0905"/>
+    <char cp="0906"/>
+    <char cp="0907"/>
+    <char cp="0908"/>
+    <char cp="0909"/>
+    <char cp="090A"/>
+    <char cp="090B"/>
+    <char cp="090C"/>
+    <char cp="090D"/>
+    <char cp="090E"/>
+    <char cp="090F"/>
+    <char cp="0910"/>
+    <char cp="0911"/>
+    <char cp="0912"/>
+    <char cp="0913"/>
+    <char cp="0914"/>
+    <char cp="0915"/>
+    <char cp="0916"/>
+    <char cp="0917"/>
+    <char cp="0918"/>
+    <char cp="0919"/>
+    <char cp="091A"/>
+    <char cp="091B"/>
+    <char cp="091C"/>
+    <char cp="091D"/>
+    <char cp="091E"/>
+    <char cp="091F"/>
+    <char cp="0920"/>
+    <char cp="0921"/>
+    <char cp="0922"/>
+    <char cp="0923"/>
+    <char cp="0924"/>
+    <char cp="0925"/>
+    <char cp="0926"/>
+    <char cp="0927"/>
+    <char cp="0928"/>
+    <char cp="0929"/>
+    <char cp="092A"/>
+    <char cp="092B"/>
+    <char cp="092C"/>
+    <char cp="092D"/>
+    <char cp="092E"/>
+    <char cp="092F"/>
+    <char cp="0930"/>
+    <char cp="0931"/>
+    <char cp="0932"/>
+    <char cp="0933"/>
+    <char cp="0934"/>
+    <char cp="0935"/>
+    <char cp="0936"/>
+    <char cp="0937"/>
+    <char cp="0938"/>
+    <char cp="0939"/>
+    <char cp="093C" not-when="not-at-start" />
+    <char cp="093D"/>
+    <char cp="093E" not-when="not-at-start" />
+    <char cp="093F" not-when="not-at-start" />
+    <char cp="0940" not-when="not-at-start" />
+    <char cp="0941" not-when="not-at-start" />
+    <char cp="0942" not-when="not-at-start" />
+    <char cp="0943" not-when="not-at-start" />
+    <char cp="0944" not-when="not-at-start" />
+    <char cp="0945" not-when="not-at-start" />
+    <char cp="0946" not-when="not-at-start" />
+    <char cp="0947" not-when="not-at-start" />
+    <char cp="0948" not-when="not-at-start" />
+    <char cp="0949" not-when="not-at-start" />
+    <char cp="094A" not-when="not-at-start" />
+    <char cp="094B" not-when="not-at-start" />
+    <char cp="094C" not-when="not-at-start" />
+    <char cp="094D" not-when="not-at-start" />
+    <char cp="094E" not-when="not-at-start" />
+    <char cp="0950"/>
+    <char cp="0953" not-when="not-at-start" />
+    <char cp="0954" not-when="not-at-start" />
+    <char cp="0955"/>
+    <char cp="0960"/>
+    <char cp="0961"/>
+    <char cp="0962"/>
+    <char cp="0963"/>
+    <char cp="0966"/>
+    <char cp="0967"/>
+    <char cp="0968"/>
+    <char cp="0969"/>
+    <char cp="096A"/>
+    <char cp="096B"/>
+    <char cp="096C"/>
+    <char cp="096D"/>
+    <char cp="096E"/>
+    <char cp="096F"/>
+    <char cp="0971"/>
+    <char cp="0972"/>
+    <char cp="0979"/>
+    <char cp="097A"/>
+    <char cp="097B"/>
+    <char cp="097C"/>
+    <char cp="097D"/>
+    <char cp="097E"/>
+    <char cp="097F"/>
+    <char cp="A8E0" not-when="not-at-start" />
+    <char cp="A8E1" not-when="not-at-start" />
+    <char cp="A8E2" not-when="not-at-start" />
+    <char cp="A8E3" not-when="not-at-start" />
+    <char cp="A8E4" not-when="not-at-start" />
+    <char cp="A8E5" not-when="not-at-start" />
+    <char cp="A8E6" not-when="not-at-start" />
+    <char cp="A8E7" not-when="not-at-start" />
+    <char cp="A8E8" not-when="not-at-start" />
+    <char cp="A8E9" not-when="not-at-start" />
+    <char cp="A8EA" not-when="not-at-start" />
+    <char cp="A8EB" not-when="not-at-start" />
+    <char cp="A8EC" not-when="not-at-start" />
+    <char cp="A8ED" not-when="not-at-start" />
+    <char cp="A8EE" not-when="not-at-start" />
+    <char cp="A8EF" not-when="not-at-start" />
+    <char cp="A8F0" not-when="not-at-start" />
+    <char cp="A8F1" not-when="not-at-start" />
+    <char cp="A8F2"/>
+    <char cp="A8F3"/>
+    <char cp="A8F4"/>
+    <char cp="A8F5"/>
+    <char cp="A8F6"/>
+    <char cp="A8F7"/>
+    <char cp="A8FB"/>
+  </data>
+  
+  <rules>
+
+	<class name="devanagari-signs">0900-0903 093C 094D-094E 0953-0954</class>
+	<class name="devanagari-dependent-vowel-signs">093E-094C</class>
+	<class name="devanagari-vowel-signs">0955 0962 0963</class>
+	<class name="devanagari-combining-signs">A8E0-A8F1</class>
+	
+  	<rule name="hyphen-minus-disallowed" comment="RFC5891 restrictions on placement of U+002D">
+      <choice>
+        <rule comment="no leading hyphen">
+          <look-behind>
+            <start/>
+          </look-behind>
+          <anchor/>
+        </rule>
+        <rule comment="no trailing hyphen">
+          <anchor/>
+          <look-ahead>
+            <end/>
+          </look-ahead>
+        </rule>
+        <rule comment="no consecutive hyphens in third and fourth">
+          <look-behind>
+            <start/>
+            <any/>
+            <any/>
+            <char cp="002D" comment="hyphen-minus"/>
+          </look-behind>
+          <anchor/>
+        </rule>
+      </choice>
+    </rule>
+
+	<rule name="not-at-start" comment="these codepoints at the beginning is disallowed">
+		<start/>
+		<choice count="1+">
+			<class by-ref="devanagari-signs"/>
+			<class by-ref="devanagari-vowel-signs"/>
+			<class by-ref="devanagari-dependent-vowel-signs"/>
+			<class by-ref="devanagari-combining-signs"/>
+		</choice>
+	</rule>
+
+	<action disp="invalid" match="not-at-start" />	
+    <action disp="valid" comment="catch all"/>
+
+  </rules>
+</lgr>

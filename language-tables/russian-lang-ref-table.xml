@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='utf-8'?>
+<lgr xmlns="urn:ietf:params:xml:ns:lgr-1.0">
+  <meta>
+    <version comment="IDN Reference table for the Russian language">1.1</version>
+    <date>2017-05-16</date>
+    <unicode-version>6.3.0</unicode-version>
+    <language>ru</language>
+    <description type="text/plain"><![CDATA[
+This IDN table is published on <https://github.com/dotse/IDN-ref-tables> where 
+# you can find the latest version, other tables and information concerning the 
+# purpose, creation and update of the tables.
+#
+# This IDN table has been created by .SE <https://www.iis.se/english/> mainly based 
+# on the material in the listed references. 
+#
+# .SE has put this work into Public Domain in accordance with CC0 1.0 Universal.
+# See <http://creativecommons.org/publicdomain/zero/1.0/> for the conditions. You 
+# can copy, modify, distribute and perform the work, even for commercial purposes, 
+# all without asking permission.
+
+
+## Language references
+#
+# Wikipedia: "Russian orthography", http://en.wikipedia.org/wiki/Russian_alphabet
+#
+# In "Omniglot" - the online encyclopedia of writing systems and languages, 
+# http://www.omniglot.com/writing/russian.htm
+
+## References for contextual rules
+#
+# RFC 5891: “Internationalized Domain Names in Applications (IDNA): Protocol” 
+# (proposed standard), http://tools.ietf.org/html/rfc5891
+
+
+## Code points requiring contextual rules
+#
+# Code point                        Description of rule/Reference
+#
+# U+002D                            Label must neither start nor end with U+002D. Label 
+#   HYPHEN-MINUS                    must not have U+002D in both third and fourth
+#                                   position. RFC 5891 (sec 4.2.3.1)
+    ]]></description>
+  </meta>
+  <data>
+    <char cp="002D" not-when="hyphen-minus-disallowed" />
+    <char cp="0030"/>
+    <char cp="0031"/>
+    <char cp="0032"/>
+    <char cp="0033"/>
+    <char cp="0034"/>
+    <char cp="0035"/>
+    <char cp="0036"/>
+    <char cp="0037"/>
+    <char cp="0038"/>
+    <char cp="0039"/>
+    <char cp="0430"/>
+    <char cp="0431"/>
+    <char cp="0432"/>
+    <char cp="0433"/>
+    <char cp="0434"/>
+    <char cp="0435"/>
+    <char cp="0436"/>
+    <char cp="0437"/>
+    <char cp="0438"/>
+    <char cp="0439"/>
+    <char cp="043A"/>
+    <char cp="043B"/>
+    <char cp="043C"/>
+    <char cp="043D"/>
+    <char cp="043E"/>
+    <char cp="043F"/>
+    <char cp="0440"/>
+    <char cp="0441"/>
+    <char cp="0442"/>
+    <char cp="0443"/>
+    <char cp="0444"/>
+    <char cp="0445"/>
+    <char cp="0446"/>
+    <char cp="0447"/>
+    <char cp="0448"/>
+    <char cp="0449"/>
+    <char cp="044A"/>
+    <char cp="044B"/>
+    <char cp="044C"/>
+    <char cp="044D"/>
+    <char cp="044E"/>
+    <char cp="044F"/>
+    <char cp="0451"/>
+  </data>
+  <rules>
+    <rule name="hyphen-minus-disallowed" comment="RFC5891 restrictions on placement of U+002D">
+      <choice>
+        <rule comment="no leading hyphen">
+          <look-behind>
+            <start/>
+          </look-behind>
+          <anchor/>
+        </rule>
+        <rule comment="no trailing hyphen">
+          <anchor/>
+          <look-ahead>
+            <end/>
+          </look-ahead>
+        </rule>
+        <rule comment="no consecutive hyphens in third and fourth">
+          <look-behind>
+            <start/>
+            <any/>
+            <any/>
+            <char cp="002D" comment="hyphen-minus"/>
+          </look-behind>
+          <anchor/>
+        </rule>
+      </choice>
+    </rule>
+    <action disp="valid" comment="catch all"/>
+  </rules>
+</lgr>

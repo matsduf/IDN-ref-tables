@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='utf-8'?>
+<lgr xmlns="urn:ietf:params:xml:ns:lgr-1.0">
+  <meta>
+    <version comment="IDN Reference table for Kannada script">1.1</version>
+    <date>2017-05-19</date>
+    <unicode-version>6.3.0</unicode-version>
+    <description type="text/plain"><![CDATA[
+This IDN table is published on <https://github.com/dotse/IDN-ref-tables> where 
+you can find the latest version, other tables and information concerning the 
+purpose, creation and update of the tables.
+
+This IDN table has been created by .SE <https://www.iis.se/english/> mainly based 
+on the material in the listed references. 
+
+.SE has put this work into Public Domain in accordance with CC0 1.0 Universal.
+See <http://creativecommons.org/publicdomain/zero/1.0/> for the conditions. You 
+can copy, modify, distribute and perform the work, even for commercial purposes, 
+all without asking permission.
+
+
+## Script references
+
+Wikipedia: "Kannada", http://en.wikipedia.org/wiki/Kannada_alphabet
+
+In "Omniglot" - the online encyclopedia of writing systems and languages, 
+   http://omniglot.com/writing/kannada.htm
+
+Daniels, Peter T. & Bright, William: "The world's writing systems", page 413
+
+
+## References for contextual rules
+
+RFC 5891: “Internationalized Domain Names in Applications (IDNA): Protocol” 
+   (proposed standard), http://tools.ietf.org/html/rfc5891
+
+Unicode Technical Standard 46 (UTS-46), http://unicode.org/reports/tr46/
+
+
+## Code points requiring contextual rules
+
+Code point                  Description of rule/Reference
+
+U+002D                      Label must neither start nor end with U+002D. Label 
+   HYPHEN-MINUS             must not have U+002D in both third and fourth
+                            position. RFC 5891 (sec 4.2.3.1)
+
+U+0C83, U+0CBC, U+0CCD,     Combining characters cannot start a label. UTS-46 
+0CD5..0CD6                  (sec 4.1)
+  KANNADA SIGNS
+ 
+ 
+0CBE..0CC4, 0CC6..0CC8,     Combining vowel characters cannot start a label. UTS-46 
+0CCA..0CCC, 0CE2..0CE3      (sec 4.1)
+  KANNADA VOWEL SIGNS
+    ]]></description>
+  </meta>
+  <data>
+    <char cp="002D" not-when="hyphen-minus-disallowed" />
+    <char cp="0030"/>
+    <char cp="0031"/>
+    <char cp="0032"/>
+    <char cp="0033"/>
+    <char cp="0034"/>
+    <char cp="0035"/>
+    <char cp="0036"/>
+    <char cp="0037"/>
+    <char cp="0038"/>
+    <char cp="0039"/>
+    <char cp="0C83" not-when="not-at-start" />
+    <char cp="0C85"/>
+    <char cp="0C86"/>
+    <char cp="0C87"/>
+    <char cp="0C88"/>
+    <char cp="0C89"/>
+    <char cp="0C8A"/>
+    <char cp="0C8B"/>
+    <char cp="0C8C"/>
+    <char cp="0C8E"/>
+    <char cp="0C8F"/>
+    <char cp="0C90"/>
+    <char cp="0C92"/>
+    <char cp="0C93"/>
+    <char cp="0C94"/>
+    <char cp="0C95"/>
+    <char cp="0C96"/>
+    <char cp="0C97"/>
+    <char cp="0C98"/>
+    <char cp="0C99"/>
+    <char cp="0C9A"/>
+    <char cp="0C9B"/>
+    <char cp="0C9C"/>
+    <char cp="0C9D"/>
+    <char cp="0C9E"/>
+    <char cp="0C9F"/>
+    <char cp="0CA0"/>
+    <char cp="0CA1"/>
+    <char cp="0CA2"/>
+    <char cp="0CA3"/>
+    <char cp="0CA4"/>
+    <char cp="0CA5"/>
+    <char cp="0CA6"/>
+    <char cp="0CA7"/>
+    <char cp="0CA8"/>
+    <char cp="0CAA"/>
+    <char cp="0CAB"/>
+    <char cp="0CAC"/>
+    <char cp="0CAD"/>
+    <char cp="0CAE"/>
+    <char cp="0CAF"/>
+    <char cp="0CB0"/>
+    <char cp="0CB1"/>
+    <char cp="0CB2"/>
+    <char cp="0CB3"/>
+    <char cp="0CB5"/>
+    <char cp="0CB6"/>
+    <char cp="0CB7"/>
+    <char cp="0CB8"/>
+    <char cp="0CB9"/>
+    <char cp="0CBC" not-when="not-at-start" />
+    <char cp="0CBD"/>
+    <char cp="0CBE" not-when="not-at-start" />
+    <char cp="0CBF" not-when="not-at-start" />
+    <char cp="0CC0" not-when="not-at-start" />
+    <char cp="0CC1" not-when="not-at-start" />
+    <char cp="0CC2" not-when="not-at-start" />
+    <char cp="0CC3" not-when="not-at-start" />
+    <char cp="0CC4" not-when="not-at-start" />
+    <char cp="0CC6" not-when="not-at-start" />
+    <char cp="0CC7" not-when="not-at-start" />
+    <char cp="0CC8" not-when="not-at-start" />
+    <char cp="0CCA" not-when="not-at-start" />
+    <char cp="0CCB" not-when="not-at-start" />
+    <char cp="0CCC" not-when="not-at-start" />
+    <char cp="0CCD" not-when="not-at-start" />
+    <char cp="0CD5" not-when="not-at-start" />
+    <char cp="0CD6" not-when="not-at-start" />
+    <char cp="0CDE"/>
+    <char cp="0CE0"/>
+    <char cp="0CE1"/>
+    <char cp="0CE2" not-when="not-at-start" />
+    <char cp="0CE3" not-when="not-at-start" />
+    <char cp="0CE6"/>
+    <char cp="0CE7"/>
+    <char cp="0CE8"/>
+    <char cp="0CE9"/>
+    <char cp="0CEA"/>
+    <char cp="0CEB"/>
+    <char cp="0CEC"/>
+    <char cp="0CED"/>
+    <char cp="0CEE"/>
+    <char cp="0CEF"/>
+  </data>
+  
+  <rules>
+
+	<class name="kannada-signs">0C83 0CBC 0CCD 0CD5-0CD6</class>
+	<class name="kannada-vowel-signs">0CBE-0CC4 0CC6-0CC8 0CCA-0CCC 0CE2-0CE3</class>
+	
+  	<rule name="hyphen-minus-disallowed" comment="RFC5891 restrictions on placement of U+002D">
+      <choice>
+        <rule comment="no leading hyphen">
+          <look-behind>
+            <start/>
+          </look-behind>
+          <anchor/>
+        </rule>
+        <rule comment="no trailing hyphen">
+          <anchor/>
+          <look-ahead>
+            <end/>
+          </look-ahead>
+        </rule>
+        <rule comment="no consecutive hyphens in third and fourth">
+          <look-behind>
+            <start/>
+            <any/>
+            <any/>
+            <char cp="002D" comment="hyphen-minus"/>
+          </look-behind>
+          <anchor/>
+        </rule>
+      </choice>
+    </rule>
+
+	<rule name="not-at-start" comment="these codepoints at the beginning is disallowed">
+		<start/>
+		<choice count="1+">
+			<class by-ref="kannada-signs"/>
+			<class by-ref="kannada-vowel-signs"/>
+		</choice>
+	</rule>
+
+	<action disp="invalid" match="not-at-start" />	
+    <action disp="valid" comment="catch all"/>
+
+  </rules>
+</lgr>

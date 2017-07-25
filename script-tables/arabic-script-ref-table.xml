@@ -1,0 +1,451 @@
+<?xml version='1.0' encoding='utf-8'?>
+<lgr xmlns="urn:ietf:params:xml:ns:lgr-1.0">
+  <meta>
+    <version comment="IDN Reference table for Arabic script">1.1</version>
+    <unicode-version>6.3.0</unicode-version>
+    <description type="text/plain"><![CDATA[
+This IDN table is published on <https://github.com/dotse/IDN-ref-tables> where 
+you can find the latest version, other tables and information concerning the 
+purpose, creation and update of the tables.
+
+This IDN table has been created by .SE <https://www.iis.se/english/> mainly based 
+on the material in the listed references. 
+
+.SE has put this work into Public Domain in accordance with CC0 1.0 Universal.
+See <http://creativecommons.org/publicdomain/zero/1.0/> for the conditions. You 
+can copy, modify, distribute and perform the work, even for commercial purposes, 
+all without asking permission.
+
+
+## Script references
+
+"Maximal Starting Repertoire - MSR-1. Annotated Repertoire Tables, Non-CJK", pp. 32-40, 
+   https://www.icann.org/en/system/files/files/msr-non-cjk-06jun14-en.pdf,
+   Linked from https://www.icann.org/news/announcement-2-2014-06-20-en
+
+"Arabic script", http://en.wikipedia.org/wiki/Arabic_script
+
+Daniels, Peter T. & Bright, William: "The world's writing systems", pp. 559-564
+
+
+## References for contextual rules
+
+RFC 5891: “Internationalized Domain Names in Applications (IDNA): Protocol” 
+   (proposed standard), http://tools.ietf.org/html/rfc5891
+
+RFC 5893: "Right-to-Left Scripts for Internationalized Domain Names for Applications 
+   (IDNA)"  (proposed standard), http://tools.ietf.org/html/rfc5893
+
+UAX#24 (Unicode Standard Annex #24), "Unicode Script Property",
+   http://www.unicode.org/reports/tr24
+
+Unicode Character Database "ScriptExtensions.txt", 
+   http://www.unicode.org/Public/7.0.0/ucd/ScriptExtensions.txt  
+
+
+## Code points requiring contextual rules
+
+Code point                        Description of rule/Reference
+
+U+002D                            Label must neither start nor end with U+002D. Label 
+   HYPHEN-MINUS                   must not have U+002D in both third and fourth
+                                  position. RFC 5891 (sec 4.2.3.1).
+
+0660..0669                        Must not be in initial position. Must not be combined 
+   ARABIC-INDIC DIGITS            with (EUROPEAN) DIGITS. Must not be combined with
+                                  EXTENDED ARABIC-INDIC DIGITS. RFC 5893 (sec 2, rules 1
+                                  and 4). RFC 5892 (App A.8),
+
+0030..0039                        Must not be in initial position. Must not be combined 
+   (EUROPEAN) DIGITS              with ARABIC-INDIC DIGITS. RFC 5893 (sec 2, rules 1
+                                  and 4).
+
+06F0..06F9                        Must not be in initial position. Must not be combined
+   EXTENDED ARABIC-INDIC DIGITS   with ARABIC-INDIC DIGITS. RFC 5893 (sec 2, rules 1).
+                                  RFC 5892 (App A.9). 
+
+064B..0652, 0654..065F, U+0670,   Not in initial position. RFC 5891 (4.2.3.2).
+   08EA..08EF, 08F4..08FE         
+   Combining marks                 
+
+064B..0652, U+0654, U+0655,       With Arabic code points. UAX #24
+   U+0670                         (sec 2.3) + Unicode Character Database 
+   Inherited code points          (ScriptExtensions.txt)
+
+The restrictions stated above for combining marks may not be complete. Other
+restrictions may apply. Suggestions requested.
+    ]]></description>
+  </meta>
+  <data>
+    <char cp="002D" not-when="hyphen-minus-disallowed" />
+    <char cp="0030" not-when="no-digit-at-start" />
+    <char cp="0031" not-when="no-digit-at-start" />
+    <char cp="0032" not-when="no-digit-at-start" />
+    <char cp="0033" not-when="no-digit-at-start" />
+    <char cp="0034" not-when="no-digit-at-start" />
+    <char cp="0035" not-when="no-digit-at-start" />
+    <char cp="0036" not-when="no-digit-at-start" />
+    <char cp="0037" not-when="no-digit-at-start" />
+    <char cp="0038" not-when="no-digit-at-start" />
+    <char cp="0039" not-when="no-digit-at-start" />
+    <char cp="0620"/>
+    <char cp="0621"/>
+    <char cp="0622"/>
+    <char cp="0623"/>
+    <char cp="0624"/>
+    <char cp="0625"/>
+    <char cp="0626"/>
+    <char cp="0627"/>
+    <char cp="0628"/>
+    <char cp="0629"/>
+    <char cp="062A"/>
+    <char cp="062B"/>
+    <char cp="062C"/>
+    <char cp="062D"/>
+    <char cp="062E"/>
+    <char cp="062F"/>
+    <char cp="0630"/>
+    <char cp="0631"/>
+    <char cp="0632"/>
+    <char cp="0633"/>
+    <char cp="0634"/>
+    <char cp="0635"/>
+    <char cp="0636"/>
+    <char cp="0637"/>
+    <char cp="0638"/>
+    <char cp="0639"/>
+    <char cp="063A"/>
+    <char cp="0641"/>
+    <char cp="0642"/>
+    <char cp="0643"/>
+    <char cp="0644"/>
+    <char cp="0645"/>
+    <char cp="0646"/>
+    <char cp="0647"/>
+    <char cp="0648"/>
+    <char cp="0649"/>
+    <char cp="064A"/>
+    <char cp="064B" when="arabic-in-label" />
+    <char cp="064C" when="arabic-in-label" />
+    <char cp="064D" when="arabic-in-label" />
+    <char cp="064E" when="arabic-in-label" />
+    <char cp="064F" when="arabic-in-label" />
+    <char cp="0650" when="arabic-in-label" />
+    <char cp="0651" when="arabic-in-label" />
+    <char cp="0652" when="arabic-in-label" />
+    <char cp="0654" when="arabic-in-label" />
+    <char cp="0655" when="arabic-in-label" />
+    <char cp="0656"/>
+    <char cp="0657"/>
+    <char cp="0658"/>
+    <char cp="0659"/>
+    <char cp="065A"/>
+    <char cp="065B"/>
+    <char cp="065C"/>
+    <char cp="065D"/>
+    <char cp="065E"/>
+    <char cp="065F"/>
+    <char cp="0660" not-when="no-digit-at-start" />
+    <char cp="0661" not-when="no-digit-at-start" />
+    <char cp="0662" not-when="no-digit-at-start" />
+    <char cp="0663" not-when="no-digit-at-start" />
+    <char cp="0664" not-when="no-digit-at-start" />
+    <char cp="0665" not-when="no-digit-at-start" />
+    <char cp="0666" not-when="no-digit-at-start" />
+    <char cp="0667" not-when="no-digit-at-start" />
+    <char cp="0668" not-when="no-digit-at-start" />
+    <char cp="0669" not-when="no-digit-at-start" />
+    <char cp="0670" when="arabic-in-label" />
+    <char cp="0671"/>
+    <char cp="0672"/>
+    <char cp="0674"/>
+    <char cp="0679"/>
+    <char cp="067A"/>
+    <char cp="067B"/>
+    <char cp="067C"/>
+    <char cp="067D"/>
+    <char cp="067E"/>
+    <char cp="067F"/>
+    <char cp="0680"/>
+    <char cp="0681"/>
+    <char cp="0682"/>
+    <char cp="0683"/>
+    <char cp="0684"/>
+    <char cp="0685"/>
+    <char cp="0686"/>
+    <char cp="0687"/>
+    <char cp="0688"/>
+    <char cp="0689"/>
+    <char cp="068A"/>
+    <char cp="068B"/>
+    <char cp="068C"/>
+    <char cp="068D"/>
+    <char cp="068E"/>
+    <char cp="068F"/>
+    <char cp="0690"/>
+    <char cp="0691"/>
+    <char cp="0692"/>
+    <char cp="0693"/>
+    <char cp="0694"/>
+    <char cp="0695"/>
+    <char cp="0696"/>
+    <char cp="0697"/>
+    <char cp="0698"/>
+    <char cp="0699"/>
+    <char cp="069A"/>
+    <char cp="069B"/>
+    <char cp="069C"/>
+    <char cp="069D"/>
+    <char cp="069E"/>
+    <char cp="069F"/>
+    <char cp="06A0"/>
+    <char cp="06A1"/>
+    <char cp="06A2"/>
+    <char cp="06A3"/>
+    <char cp="06A4"/>
+    <char cp="06A5"/>
+    <char cp="06A6"/>
+    <char cp="06A7"/>
+    <char cp="06A8"/>
+    <char cp="06A9"/>
+    <char cp="06AA"/>
+    <char cp="06AB"/>
+    <char cp="06AD"/>
+    <char cp="06AE"/>
+    <char cp="06AF"/>
+    <char cp="06B0"/>
+    <char cp="06B1"/>
+    <char cp="06B2"/>
+    <char cp="06B3"/>
+    <char cp="06B4"/>
+    <char cp="06B5"/>
+    <char cp="06B6"/>
+    <char cp="06B7"/>
+    <char cp="06B8"/>
+    <char cp="06B9"/>
+    <char cp="06BA"/>
+    <char cp="06BB"/>
+    <char cp="06BC"/>
+    <char cp="06BD"/>
+    <char cp="06BE"/>
+    <char cp="06BF"/>
+    <char cp="06C0"/>
+    <char cp="06C1"/>
+    <char cp="06C2"/>
+    <char cp="06C3"/>
+    <char cp="06C4"/>
+    <char cp="06C5"/>
+    <char cp="06C6"/>
+    <char cp="06C7"/>
+    <char cp="06C8"/>
+    <char cp="06C9"/>
+    <char cp="06CA"/>
+    <char cp="06CB"/>
+    <char cp="06CC"/>
+    <char cp="06CD"/>
+    <char cp="06CE"/>
+    <char cp="06CF"/>
+    <char cp="06D0"/>
+    <char cp="06D1"/>
+    <char cp="06D2"/>
+    <char cp="06D3"/>
+    <char cp="06D5"/>
+    <char cp="06EE"/>
+    <char cp="06EF"/>
+    <char cp="06F0" not-when="no-digit-at-start" />
+    <char cp="06F1" not-when="no-digit-at-start" />
+    <char cp="06F2" not-when="no-digit-at-start" />
+    <char cp="06F3" not-when="no-digit-at-start" />
+    <char cp="06F4" not-when="no-digit-at-start" />
+    <char cp="06F5" not-when="no-digit-at-start" />
+    <char cp="06F6" not-when="no-digit-at-start" />
+    <char cp="06F7" not-when="no-digit-at-start" />
+    <char cp="06F8" not-when="no-digit-at-start" />
+    <char cp="06F9" not-when="no-digit-at-start" />
+    <char cp="06FA"/>
+    <char cp="06FB"/>
+    <char cp="06FC"/>
+    <char cp="06FF"/>
+    <char cp="0750"/>
+    <char cp="0751"/>
+    <char cp="0752"/>
+    <char cp="0753"/>
+    <char cp="0754"/>
+    <char cp="0755"/>
+    <char cp="0756"/>
+    <char cp="0757"/>
+    <char cp="0758"/>
+    <char cp="0759"/>
+    <char cp="075A"/>
+    <char cp="075B"/>
+    <char cp="075C"/>
+    <char cp="075D"/>
+    <char cp="075E"/>
+    <char cp="075F"/>
+    <char cp="0760"/>
+    <char cp="0761"/>
+    <char cp="0762"/>
+    <char cp="0763"/>
+    <char cp="0764"/>
+    <char cp="0765"/>
+    <char cp="0766"/>
+    <char cp="0767"/>
+    <char cp="0768"/>
+    <char cp="0769"/>
+    <char cp="076A"/>
+    <char cp="076B"/>
+    <char cp="076C"/>
+    <char cp="076D"/>
+    <char cp="076E"/>
+    <char cp="076F"/>
+    <char cp="0770"/>
+    <char cp="0771"/>
+    <char cp="0772"/>
+    <char cp="0773"/>
+    <char cp="0774"/>
+    <char cp="0775"/>
+    <char cp="0776"/>
+    <char cp="0777"/>
+    <char cp="0778"/>
+    <char cp="0779"/>
+    <char cp="077A"/>
+    <char cp="077B"/>
+    <char cp="077C"/>
+    <char cp="077D"/>
+    <char cp="08A0"/>
+    <char cp="08A2"/>
+    <char cp="08A3"/>
+    <char cp="08A4"/>
+    <char cp="08A5"/>
+    <char cp="08A6"/>
+    <char cp="08A7"/>
+    <char cp="08A8"/>
+    <char cp="08A9"/>
+    <char cp="08AA"/>
+    <char cp="08AB"/>
+    <char cp="08AC"/>
+    <char cp="08E4"/>
+    <char cp="08E5"/>
+    <char cp="08E6"/>
+    <char cp="08E7"/>
+    <char cp="08E8"/>
+    <char cp="08E9"/>
+    <char cp="08EA"/>
+    <char cp="08EB"/>
+    <char cp="08EC"/>
+    <char cp="08ED"/>
+    <char cp="08EE"/>
+    <char cp="08EF"/>
+    <char cp="08F4"/>
+    <char cp="08F5"/>
+    <char cp="08F6"/>
+    <char cp="08F7"/>
+    <char cp="08F8"/>
+    <char cp="08F9"/>
+    <char cp="08FA"/>
+    <char cp="08FB"/>
+    <char cp="08FC"/>
+    <char cp="08FD"/>
+    <char cp="08FE"/>
+  </data>
+  <rules>
+  	<class name="arabic-digits">0030-0039</class>
+	<class name="arabic-indic-digits">0660-0669</class>
+	<class name="extended-arabic-indic-digits">06F0-06F9</class>
+  	<class name="combining-marks">064B-0652 0654-065F 0670 08EA-08EF 08F4-08FE</class>
+  	<class name="arabic-language">0620-063A 0641-064A</class>
+
+    <rule name="hyphen-minus-disallowed" comment="RFC5891 restrictions on placement of U+002D">
+      <choice>
+        <rule comment="no leading hyphen">
+          <look-behind>
+            <start/>
+          </look-behind>
+          <anchor/>
+        </rule>
+        <rule comment="no trailing hyphen">
+          <anchor/>
+          <look-ahead>
+            <end/>
+          </look-ahead>
+        </rule>
+        <rule comment="no consecutive hyphens in third and fourth">
+          <look-behind>
+            <start/>
+            <any/>
+            <any/>
+            <char cp="002D" comment="hyphen-minus"/>
+          </look-behind>
+          <anchor/>
+        </rule>
+      </choice>
+    </rule>
+
+	
+	<rule name="no-digit-at-start" comment="digits at the beginning is disallowed">
+		<start/>
+		<choice count="1+">
+			<class by-ref="arabic-digits"/>
+			<class by-ref="arabic-indic-digits"/>
+		</choice>
+	</rule>
+	   
+	<rule name="no-digit-mixing">
+        <choice>
+            <rule>
+                <class by-ref="arabic-digits"/>
+                <any count="0+"/>
+                <class by-ref="arabic-indic-digits"/>
+            </rule>
+            <rule>
+                <class by-ref="arabic-digits"/>
+                <any count="0+"/>
+                <class by-ref="extended-arabic-indic-digits"/>
+            </rule>
+            <rule>
+                <class by-ref="arabic-indic-digits"/>
+                <any count="0+"/>
+                <class by-ref="extended-arabic-indic-digits"/>
+            </rule>
+            <rule>
+                <class by-ref="arabic-indic-digits"/>
+                <any count="0+"/>
+                <class by-ref="arabic-digits"/>
+            </rule>
+            <rule>
+                <class by-ref="extended-arabic-indic-digits"/>
+                <any count="0+"/>
+                <class by-ref="arabic-digits"/>
+            </rule>
+            <rule>
+                <class by-ref="extended-arabic-indic-digits"/>
+                <any count="0+"/>
+                <class by-ref="arabic-indic-digits"/>
+            </rule>
+        </choice>
+    </rule>
+
+	<rule name="no-combining-mark-at-start" comment="combining marks at the beginning is disallowed">
+		<look-behind>
+        	<choice>
+           		<start/>
+             	<rule>
+					<class by-ref="combining-marks" count="0+"/>
+             	</rule>
+           	</choice>
+    	</look-behind>
+        <anchor/>
+	</rule>
+	
+    <rule name="arabic-in-label" comment="Inherited code points only with Arabic code points.">
+		<class by-ref="arabic-language" />
+    </rule>
+
+	
+	<action disp="invalid" match="no-digit-at-start" />	
+	<action disp="invalid" match="no-digit-mixing" />
+	<action disp="invalid" match="no-combining-mark-at-start" />
+    <action disp="valid" comment="catch all"/>
+
+  </rules>
+</lgr>

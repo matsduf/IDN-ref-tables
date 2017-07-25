@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='utf-8'?>
+<lgr xmlns="urn:ietf:params:xml:ns:lgr-1.0">
+  <meta>
+    <version comment="IDN Reference table for Arabic language">1.2</version>
+    <date>2017-05-16</date>
+    <unicode-version>6.3.0</unicode-version>
+    <language>ar</language>
+    <description type="text/plain"><![CDATA[
+This IDN table is published on <https://github.com/dotse/IDN-ref-tables> where 
+you can find the latest version, other tables and information concerning the 
+purpose, creation and update of the tables.
+
+This IDN table has been created by .SE <https://www.iis.se/english/> mainly based 
+on the material in the listed references. 
+
+.SE has put this work into Public Domain in accordance with CC0 1.0 Universal.
+See <http://creativecommons.org/publicdomain/zero/1.0/> for the conditions. You 
+can copy, modify, distribute and perform the work, even for commercial purposes, 
+all without asking permission.
+
+
+## Language references
+
+Wikipedia: "Arabic orthography", http://en.wikipedia.org/wiki/Arabic_alphabet
+
+In "Omniglot" - the online encyclopedia of writing systems and languages, 
+   http://www.omniglot.com/writing/arabic.htm
+
+RFC 5564: "Linguistic Guidelines for the Use of the Arabic Language in Internet 
+   Domains"  (informational), http://tools.ietf.org/html/rfc5564
+
+
+## References for contextual rules
+
+RFC 5891: “Internationalized Domain Names in Applications (IDNA): Protocol” 
+   (proposed standard), http://tools.ietf.org/html/rfc5891
+
+RFC 5893: "Right-to-Left Scripts for Internationalized Domain Names for Applications 
+   (IDNA)"  (proposed standard), http://tools.ietf.org/html/rfc5893
+
+
+## Code points requiring contextual rules
+
+Code point                        Description of rule/Reference
+
+U+002D                            Label must neither start nor end with U+002D. Label 
+   HYPHEN-MINUS                   must not have U+002D in both third and fourth
+                                  position. RFC 5891 (sec 4.2.3.1)
+
+0660..0669                        Must not be in initial position. Must not be combined 
+   ARABIC-INDIC DIGITS            with (EUROPEAN) DIGITS. RFC 5893 (sec 2, rules 1 and
+                                  4)
+
+0030..0039                        Must not be in initial position. Must not be combined 
+   (EUROPEAN) DIGITS              with ARABIC-INDIC DIGITS. RFC 5893 (sec 2, rules 1
+                                  and 4)
+    ]]></description>
+  </meta>
+  <data>
+    <char cp="002D" not-when="hyphen-minus-disallowed" />
+    <char cp="0030" not-when="no-digit-at-start" />
+    <char cp="0031" not-when="no-digit-at-start" />
+    <char cp="0032" not-when="no-digit-at-start" />
+    <char cp="0033" not-when="no-digit-at-start" />
+    <char cp="0034" not-when="no-digit-at-start" />
+    <char cp="0035" not-when="no-digit-at-start" />
+    <char cp="0036" not-when="no-digit-at-start" />
+    <char cp="0037" not-when="no-digit-at-start" />
+    <char cp="0038" not-when="no-digit-at-start" />
+    <char cp="0039" not-when="no-digit-at-start" />
+    <char cp="0621"/>
+    <char cp="0622"/>
+    <char cp="0623"/>
+    <char cp="0624"/>
+    <char cp="0625"/>
+    <char cp="0626"/>
+    <char cp="0627"/>
+    <char cp="0628"/>
+    <char cp="0629"/>
+    <char cp="062A"/>
+    <char cp="062B"/>
+    <char cp="062C"/>
+    <char cp="062D"/>
+    <char cp="062E"/>
+    <char cp="062F"/>
+    <char cp="0630"/>
+    <char cp="0631"/>
+    <char cp="0632"/>
+    <char cp="0633"/>
+    <char cp="0634"/>
+    <char cp="0635"/>
+    <char cp="0636"/>
+    <char cp="0637"/>
+    <char cp="0638"/>
+    <char cp="0639"/>
+    <char cp="063A"/>
+    <char cp="0641"/>
+    <char cp="0642"/>
+    <char cp="0643"/>
+    <char cp="0644"/>
+    <char cp="0645"/>
+    <char cp="0646"/>
+    <char cp="0647"/>
+    <char cp="0648"/>
+    <char cp="0649"/>
+    <char cp="064A"/>
+    <char cp="0660" not-when="no-digit-at-start" />
+    <char cp="0661" not-when="no-digit-at-start" />
+    <char cp="0662" not-when="no-digit-at-start" />
+    <char cp="0663" not-when="no-digit-at-start" />
+    <char cp="0664" not-when="no-digit-at-start" />
+    <char cp="0665" not-when="no-digit-at-start" />
+    <char cp="0666" not-when="no-digit-at-start" />
+    <char cp="0667" not-when="no-digit-at-start" />
+    <char cp="0668" not-when="no-digit-at-start" />
+    <char cp="0669" not-when="no-digit-at-start" />
+  </data>
+  <rules>
+
+	<class name="arabic-digits">0030-0039</class>
+	<class name="arabic-indic-digits">0660-0669</class>
+
+    <rule name="hyphen-minus-disallowed" comment="RFC5891 restrictions on placement of U+002D">
+      <choice>
+        <rule comment="no leading hyphen">
+          <look-behind>
+            <start/>
+          </look-behind>
+          <anchor/>
+        </rule>
+        <rule comment="no trailing hyphen">
+          <anchor/>
+          <look-ahead>
+            <end/>
+          </look-ahead>
+        </rule>
+        <rule comment="no consecutive hyphens in third and fourth">
+          <look-behind>
+            <start/>
+            <any/>
+            <any/>
+            <char cp="002D" comment="hyphen-minus"/>
+          </look-behind>
+          <anchor/>
+        </rule>
+      </choice>
+    </rule>
+
+	<rule name="no-digit-at-start" comment="digits at the beginning is disallowed">
+		<start/>
+		<choice count="1+">
+			<class by-ref="arabic-digits"/>
+			<class by-ref="arabic-indic-digits"/>
+		</choice>
+	</rule>
+	   
+	<rule name="no-digit-mixing">
+        <choice>
+            <rule>
+                <class by-ref="arabic-digits"/>
+                <any count="0+"/>
+                <class by-ref="arabic-indic-digits"/>
+            </rule>
+            <rule>
+                <class by-ref="arabic-indic-digits"/>
+                <any count="0+"/>
+                <class by-ref="arabic-digits"/>
+            </rule>
+        </choice>
+    </rule>
+
+	<action disp="invalid" match="no-digit-at-start" />	
+	<action disp="invalid" match="no-digit-mixing" />
+    <action disp="valid" comment="catch all"/>
+  </rules>
+</lgr>
