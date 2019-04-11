@@ -1,7 +1,7 @@
 # IDN Reference table for Arabic language
 
 # Language: Arabic (ar)
-# Version: 2.0
+# Version: 2
 # Date: 2019-04-11
 # Unicode version: 6.3.0
 
@@ -9,13 +9,14 @@
 # you can find the latest version, other tables and information concerning the 
 # purpose, creation and update of the tables.
 #
-# This IDN table has been created by .SE <https://www.iis.se/english/> mainly based 
-# on the material in the listed references. 
+# This IDN table has been created by The Swedish Internet Foundation (earlier known
+# as IIS) <https://internetstiftelsen.se/en/> mainly based on the material in the 
+# listed references. 
 #
-# .SE has put this work into Public Domain in accordance with CC0 1.0 Universal.
-# See <http://creativecommons.org/publicdomain/zero/1.0/> for the conditions. You 
-# can copy, modify, distribute and perform the work, even for commercial purposes, 
-# all without asking permission.
+# The Swedish Internet Foundation has put this work into Public Domain in accordance 
+# with CC0 1.0 Universal. See <http://creativecommons.org/publicdomain/zero/1.0/> 
+# for the conditions. You can copy, modify, distribute and perform the work, even 
+# for commercial purposes, all without asking permission.
 
 ## Language references
 #
