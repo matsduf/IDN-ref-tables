@@ -1,22 +1,22 @@
 # IDN Reference table for Arabic language
 
 # Language: Arabic (ar)
-# Version: 1.1
-# Date: 2014-11-28
+# Version: 2
+# Date: 2019-04-11
 # Unicode version: 6.3.0
 
 # This IDN table is published on <https://github.com/dotse/IDN-ref-tables> where 
 # you can find the latest version, other tables and information concerning the 
 # purpose, creation and update of the tables.
 #
-# This IDN table has been created by .SE <https://www.iis.se/english/> mainly based 
-# on the material in the listed references. 
+# This IDN table has been created by The Swedish Internet Foundation (earlier known
+# as IIS) <https://internetstiftelsen.se/en/> mainly based on the material in the 
+# listed references. 
 #
-# .SE has put this work into Public Domain in accordance with CC0 1.0 Universal.
-# See <http://creativecommons.org/publicdomain/zero/1.0/> for the conditions. You 
-# can copy, modify, distribute and perform the work, even for commercial purposes, 
-# all without asking permission.
-
+# The Swedish Internet Foundation has put this work into Public Domain in accordance 
+# with CC0 1.0 Universal. See <http://creativecommons.org/publicdomain/zero/1.0/> 
+# for the conditions. You can copy, modify, distribute and perform the work, even 
+# for commercial purposes, all without asking permission.
 
 ## Language references
 #
@@ -27,6 +27,12 @@
 #
 # RFC 5564: "Linguistic Guidelines for the Use of the Arabic Language in Internet 
 #    Domains"  (informational), http://tools.ietf.org/html/rfc5564
+#
+# "Language Tables", Qatar Domain Name Registration Policy, version 1.0, 2011-12-01, 
+#    Appendix A,
+#    https://www.domains.qa/sites/default/files/Qatar%20Domains%20Registry-Domain%20Name%20Registration%20Policy_0.pdf
+#
+
 
 
 ## References for contextual rules
@@ -57,65 +63,67 @@
 
 ## Code point table
 #
-# Code   # Unicode        Specimen  Name
-# point  # script         Glyph 
+# Code                       # Unicode   Specimen   Name
+# point                      # script    Glyph of
+#                                        base
+#                                        character
+#=====================================================================================
+U+002D                       # Common    -          HYPHEN-MINUS
+U+0030|U+0660                # Common    0          DIGIT ZERO
+U+0031|U+0661                # Common    1          DIGIT ONE
+U+0032|U+0662                # Common    2          DIGIT TWO
+U+0033|U+0663                # Common    3          DIGIT THREE
+U+0034|U+0664                # Common    4          DIGIT FOUR
+U+0035|U+0665                # Common    5          DIGIT FIVE
+U+0036|U+0666                # Common    6          DIGIT SIX
+U+0037|U+0667                # Common    7          DIGIT SEVEN
+U+0038|U+0668                # Common    8          DIGIT EIGHT
+U+0039|U+0669                # Common    9          DIGIT NINE
 #
-U+002D   # Common         -         HYPHEN-MINUS
-U+0030   # Common         0         DIGIT ZERO
-U+0031   # Common         1         DIGIT ONE
-U+0032   # Common         2         DIGIT TWO
-U+0033   # Common         3         DIGIT THREE
-U+0034   # Common         4         DIGIT FOUR
-U+0035   # Common         5         DIGIT FIVE
-U+0036   # Common         6         DIGIT SIX
-U+0037   # Common         7         DIGIT SEVEN
-U+0038   # Common         8         DIGIT EIGHT
-U+0039   # Common         9         DIGIT NINE
+U+0621                       # Arabic    ء          ARABIC LETTER HAMZA
+U+0622|U+0623:U+0625:U+0627  # Arabic    آ          ARABIC LETTER ALEF WITH MADDA ABOVE
+U+0623|U+0622:U+0625:U+0627  # Arabic    أ          ARABIC LETTER ALEF WITH HAMZA ABOVE
+U+0624|U+0648                # Arabic    ؤ          ARABIC LETTER WAW WITH HAMZA ABOVE
+U+0625|U+0622:U+0623:U+0627  # Arabic    إ          ARABIC LETTER ALEF WITH HAMZA BELOW
+U+0626                       # Arabic    ئ          ARABIC LETTER YEH WITH HAMZA ABOVE
+U+0627|U+0622:U+0623:U+0625  # Arabic    ا          ARABIC LETTER ALEF
+U+0628                       # Arabic    ب          ARABIC LETTER BEH
+U+0629|U+0647                # Arabic    ة          ARABIC LETTER TEH MARBUTA
+U+062A                       # Arabic    ت          ARABIC LETTER TEH
+U+062B                       # Arabic    ث          ARABIC LETTER THEH
+U+062C                       # Arabic    ج          ARABIC LETTER JEEM
+U+062D                       # Arabic    ح          ARABIC LETTER HAH
+U+062E                       # Arabic    خ          ARABIC LETTER KHAH
+U+062F                       # Arabic    د          ARABIC LETTER DAL
+U+0630                       # Arabic    ذ          ARABIC LETTER THAL
+U+0631                       # Arabic    ر          ARABIC LETTER REH
+U+0632                       # Arabic    ز          ARABIC LETTER ZAIN
+U+0633                       # Arabic    س          ARABIC LETTER SEEN
+U+0634                       # Arabic    ش          ARABIC LETTER SHEEN
+U+0635                       # Arabic    ص          ARABIC LETTER SAD
+U+0636                       # Arabic    ض          ARABIC LETTER DAD
+U+0637                       # Arabic    ط          ARABIC LETTER TAH
+U+0638                       # Arabic    ظ          ARABIC LETTER ZAH
+U+0639                       # Arabic    ع          ARABIC LETTER AIN
+U+063A                       # Arabic    غ          ARABIC LETTER GHAIN
+U+0641                       # Arabic    ف          ARABIC LETTER FEH
+U+0642                       # Arabic    ق          ARABIC LETTER QAF
+U+0643                       # Arabic    ك          ARABIC LETTER KAF
+U+0644                       # Arabic    ل          ARABIC LETTER LAM
+U+0645                       # Arabic    م          ARABIC LETTER MEEM
+U+0646                       # Arabic    ن          ARABIC LETTER NOON
+U+0647|U+0629                # Arabic    ه          ARABIC LETTER HEH
+U+0648|U+0624                # Arabic    و          ARABIC LETTER WAW
+U+0649|U+064A                # Arabic    ى          ARABIC LETTER ALEF MAKSURA
+U+064A|U+0649                # Arabic    ي          ARABIC LETTER YEH
 #
-U+0621   # Arabic         ء         ARABIC LETTER HAMZA
-U+0622   # Arabic         آ         ARABIC LETTER ALEF WITH MADDA ABOVE
-U+0623   # Arabic         أ         ARABIC LETTER ALEF WITH HAMZA ABOVE
-U+0624   # Arabic         ؤ         ARABIC LETTER WAW WITH HAMZA ABOVE
-U+0625   # Arabic         إ         ARABIC LETTER ALEF WITH HAMZA BELOW
-U+0626   # Arabic         ئ         ARABIC LETTER YEH WITH HAMZA ABOVE
-U+0627   # Arabic         ا         ARABIC LETTER ALEF
-U+0628   # Arabic         ب         ARABIC LETTER BEH
-U+0629   # Arabic         ة         ARABIC LETTER TEH MARBUTA
-U+062A   # Arabic         ت         ARABIC LETTER TEH
-U+062B   # Arabic         ث         ARABIC LETTER THEH
-U+062C   # Arabic         ج         ARABIC LETTER JEEM
-U+062D   # Arabic         ح         ARABIC LETTER HAH
-U+062E   # Arabic         خ         ARABIC LETTER KHAH
-U+062F   # Arabic         د         ARABIC LETTER DAL
-U+0630   # Arabic         ذ         ARABIC LETTER THAL
-U+0631   # Arabic         ر         ARABIC LETTER REH
-U+0632   # Arabic         ز         ARABIC LETTER ZAIN
-U+0633   # Arabic         س         ARABIC LETTER SEEN
-U+0634   # Arabic         ش         ARABIC LETTER SHEEN
-U+0635   # Arabic         ص         ARABIC LETTER SAD
-U+0636   # Arabic         ض         ARABIC LETTER DAD
-U+0637   # Arabic         ط         ARABIC LETTER TAH
-U+0638   # Arabic         ظ         ARABIC LETTER ZAH
-U+0639   # Arabic         ع         ARABIC LETTER AIN
-U+063A   # Arabic         غ         ARABIC LETTER GHAIN
-U+0641   # Arabic         ف         ARABIC LETTER FEH
-U+0642   # Arabic         ق         ARABIC LETTER QAF
-U+0643   # Arabic         ك         ARABIC LETTER KAF
-U+0644   # Arabic         ل         ARABIC LETTER LAM
-U+0645   # Arabic         م         ARABIC LETTER MEEM
-U+0646   # Arabic         ن         ARABIC LETTER NOON
-U+0647   # Arabic         ه         ARABIC LETTER HEH
-U+0648   # Arabic         و         ARABIC LETTER WAW
-U+0649   # Arabic         ى         ARABIC LETTER ALEF MAKSURA
-U+064A   # Arabic         ي         ARABIC LETTER YEH
-#
-U+0660   # Common         ٠         ARABIC-INDIC DIGIT ZERO
-U+0661   # Common         ١         ARABIC-INDIC DIGIT ONE
-U+0662   # Common         ٢         ARABIC-INDIC DIGIT TWO
-U+0663   # Common         ٣         ARABIC-INDIC DIGIT THREE
-U+0664   # Common         ٤         ARABIC-INDIC DIGIT FOUR
-U+0665   # Common         ٥         ARABIC-INDIC DIGIT FIVE
-U+0666   # Common         ٦         ARABIC-INDIC DIGIT SIX
-U+0667   # Common         ٧         ARABIC-INDIC DIGIT SEVEN
-U+0668   # Common         ٨         ARABIC-INDIC DIGIT EIGHT
-U+0669   # Common         ٩         ARABIC-INDIC DIGIT NINE
+U+0660|U+0030                # Common    ٠          ARABIC-INDIC DIGIT ZERO
+U+0661|U+0031                # Common    ١          ARABIC-INDIC DIGIT ONE
+U+0662|U+0032                # Common    ٢          ARABIC-INDIC DIGIT TWO
+U+0663|U+0033                # Common    ٣          ARABIC-INDIC DIGIT THREE
+U+0664|U+0034                # Common    ٤          ARABIC-INDIC DIGIT FOUR
+U+0665|U+0035                # Common    ٥          ARABIC-INDIC DIGIT FIVE
+U+0666|U+0036                # Common    ٦          ARABIC-INDIC DIGIT SIX
+U+0667|U+0037                # Common    ٧          ARABIC-INDIC DIGIT SEVEN
+U+0668|U+0038                # Common    ٨          ARABIC-INDIC DIGIT EIGHT
+U+0669|U+0039                # Common    ٩          ARABIC-INDIC DIGIT NINE

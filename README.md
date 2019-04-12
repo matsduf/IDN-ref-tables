@@ -10,6 +10,13 @@ The tables in this repository list allowed code points for a certain language or
 
 The tables available match the most frequent languages and scripts that have been up for Pre-Delegation Testing.
 
+Table format
+------------
+
+If the IDN table file name ends with ".txt" then it is an IDN table in text format that conforms to 
+the format specified in [RFC 4290]. If the file name ends with ".xml" it is an IDN table in LGR
+format that conforms with the format specification in [RFC 7940].
+
 
 Disclaimer
 ----------
@@ -32,6 +39,11 @@ Anyone is free to use and modify the IDN tables available in this repository for
 Updates
 -------
 
-2017-07-25: All reference tables are now available both in text (.txt) and LGR (.xml) format. For the LGR format, see [RFC 7940](https://tools.ietf.org/html/rfc7940). Both tables have the same content, only the format differs.
+2017-07-25: All reference tables are now available both in text (.txt) and LGR (.xml) format. For the LGR format, 
+see [RFC 7940]. Both tables have the same content, only the format differs.
 
 
+
+
+[RFC 4290]: https://tools.ietf.org/html/rfc4290
+[RFC 7940]: https://tools.ietf.org/html/rfc7940
