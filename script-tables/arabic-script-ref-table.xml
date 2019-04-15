@@ -32,6 +32,14 @@ This script table for arabic script relies on the repertoire for the root zone
 with the addition of hyphen and digits.
 
 
+## Variants
+
+This table contains many variant sets. All variants are here seen as allocatable,
+but any implementor of this table should be aware of the risk of variant explosion
+if all possible variants are allocated. Please see the Arabic LGR (reference below)
+for the allocation restrictions for the root zone.
+
+
 ## Script references
 
 Arabic LGR: "Proposal for Arabic Script Root Zone LGR", 
